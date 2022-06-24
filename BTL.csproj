@@ -45,6 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmHPTD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHPTD.Designer.cs">
+      <DependentUpon>frmHPTD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLSDK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLSDK.Designer.cs">
+      <DependentUpon>FrmLSDK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTCHP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTCHP.Designer.cs">
+      <DependentUpon>frmTCHP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +77,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmHPTD.resx">
+      <DependentUpon>frmHPTD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLSDK.resx">
+      <DependentUpon>FrmLSDK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTCHP.resx">
+      <DependentUpon>frmTCHP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSV.resx">
       <DependentUpon>frmSV.cs</DependentUpon>
     </EmbeddedResource>

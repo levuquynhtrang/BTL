@@ -31,12 +31,13 @@ namespace BTL
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnLSDKHP = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -45,12 +46,11 @@ namespace BTL
             this.button9 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button10 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@ namespace BTL
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(22, 421);
+            this.button1.Location = new System.Drawing.Point(21, 36);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(270, 75);
@@ -70,7 +70,7 @@ namespace BTL
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.Location = new System.Drawing.Point(22, 324);
+            this.button2.Location = new System.Drawing.Point(21, 412);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(270, 75);
@@ -78,23 +78,24 @@ namespace BTL
             this.button2.Text = "Đăng ký học phần ";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnLSDKHP
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button3.Location = new System.Drawing.Point(22, 241);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(270, 75);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Lịch sử đăng ký học phần ";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnLSDKHP.BackColor = System.Drawing.Color.White;
+            this.btnLSDKHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLSDKHP.Location = new System.Drawing.Point(21, 318);
+            this.btnLSDKHP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLSDKHP.Name = "btnLSDKHP";
+            this.btnLSDKHP.Size = new System.Drawing.Size(270, 75);
+            this.btnLSDKHP.TabIndex = 1;
+            this.btnLSDKHP.Text = "Lịch sử đăng ký học phần ";
+            this.btnLSDKHP.UseVisualStyleBackColor = false;
+            this.btnLSDKHP.Click += new System.EventHandler(this.btnLSDKHP_Click);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button4.Location = new System.Drawing.Point(22, 158);
+            this.button4.Location = new System.Drawing.Point(21, 224);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(270, 75);
@@ -106,7 +107,7 @@ namespace BTL
             // 
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button5.Location = new System.Drawing.Point(22, 70);
+            this.button5.Location = new System.Drawing.Point(21, 130);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(270, 75);
@@ -123,23 +124,18 @@ namespace BTL
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1355, 145);
+            this.panel1.Size = new System.Drawing.Size(1351, 145);
             this.panel1.TabIndex = 2;
             // 
-            // button7
+            // panel2
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(0, 96);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(411, 49);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "11208055 | Lê Vũ Quỳnh Trang";
-            this.button7.UseVisualStyleBackColor = false;
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(654, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(697, 145);
+            this.panel2.TabIndex = 1;
             // 
             // button8
             // 
@@ -157,6 +153,21 @@ namespace BTL
             this.button8.Text = "Đăng xuất";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button7.Location = new System.Drawing.Point(0, 96);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(411, 49);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "11208055 | Lê Vũ Quỳnh Trang";
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
@@ -264,27 +275,17 @@ namespace BTL
             this.button10.Text = "Xuất phiếu đăng ký";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(658, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(697, 145);
-            this.panel2.TabIndex = 1;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.btnLSDKHP);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 145);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(308, 627);
+            this.panel3.Size = new System.Drawing.Size(308, 614);
             this.panel3.TabIndex = 9;
             // 
             // frmSV
@@ -292,7 +293,7 @@ namespace BTL
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(157)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(1355, 772);
+            this.ClientSize = new System.Drawing.Size(1351, 759);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.comboBox1);
@@ -305,13 +306,12 @@ namespace BTL
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSV";
             this.Text = "Đăng ký tín chỉ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -321,7 +321,7 @@ namespace BTL
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnLSDKHP;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;

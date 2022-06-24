@@ -61,6 +61,7 @@ namespace BTL
         {
             frmSV f = new frmSV();
             f.Show();
+            this.Visible = false;
         }
 
         private void txtDN_TextChanged(object sender, EventArgs e)

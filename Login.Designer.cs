@@ -222,7 +222,6 @@ namespace BTL
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.Text = "Login";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

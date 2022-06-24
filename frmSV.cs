@@ -53,5 +53,12 @@ namespace BTL
         {
 
         }
+
+        private void btnLSDKHP_Click(object sender, EventArgs e)
+        {
+            FrmLSDK f = new FrmLSDK();
+            f.Show();
+            this.Close();
+        }
     }
 }
