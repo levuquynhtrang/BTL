@@ -30,7 +30,8 @@ namespace BTL
 
         private void txtDN_Leave(object sender, EventArgs e)
         {
-            if (txtDN.Text == "") txtDN.Text = "Tên đăng nhập";
+            if (txtDN.Text == "") { txtDN.Text = "Tên đăng nhập"; };
+            txtDN.BackColor = Color.FromArgb(68, 43, 99);
 
         }
 
@@ -38,11 +39,20 @@ namespace BTL
         {
             txtMK.Text = "";
             txtMK.BackColor = Color.FromArgb(197, 173, 217);
+            picshow.BackColor= Color.FromArgb(197, 173, 217);
         }
 
         private void txtMK_Leave(object sender, EventArgs e)
         {
             if (txtMK.Text == "") txtMK.Text = "Mật khẩu";
+            txtMK.BackColor = Color.FromArgb(68, 43, 99);
+            picshow.BackColor = Color.FromArgb(68, 43, 99);
+        }
+
+        private void btnSV_Click(object sender, EventArgs e)
+        {
+            frmSV f = new frmSV();
+            f.Show();
         }
     }
 }

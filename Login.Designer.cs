@@ -30,21 +30,23 @@ namespace BTL
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.picHide = new System.Windows.Forms.PictureBox();
+            this.picshow = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnQL = new System.Windows.Forms.Button();
             this.btnSV = new System.Windows.Forms.Button();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.txtDN = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picshow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,10 +61,46 @@ namespace BTL
             this.panel1.Size = new System.Drawing.Size(396, 582);
             this.panel1.TabIndex = 0;
             // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox4.Location = new System.Drawing.Point(23, 536);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(315, 34);
+            this.textBox4.TabIndex = 2;
+            this.textBox4.Text = "Design by: NTP Thảo, NC Nguyên, LVQ Trang.";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox3.Location = new System.Drawing.Point(23, 315);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(352, 41);
+            this.textBox3.TabIndex = 1;
+            this.textBox3.Text = "ĐĂNG KÝ TÍN CHỈ ";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::BTL.Properties.Resources.NicePng_graduates_png_2904134;
+            this.pictureBox3.Location = new System.Drawing.Point(80, 64);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(220, 202);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.picHide);
+            this.panel2.Controls.Add(this.picshow);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnQL);
             this.panel2.Controls.Add(this.btnSV);
@@ -72,6 +110,40 @@ namespace BTL
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(358, 461);
             this.panel2.TabIndex = 1;
+            // 
+            // picHide
+            // 
+            this.picHide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.picHide.Cursor = System.Windows.Forms.Cursors.Default;
+            this.picHide.Image = global::BTL.Properties.Resources.eyes__1_;
+            this.picHide.Location = new System.Drawing.Point(310, 253);
+            this.picHide.Name = "picHide";
+            this.picHide.Size = new System.Drawing.Size(33, 24);
+            this.picHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picHide.TabIndex = 3;
+            this.picHide.TabStop = false;
+            // 
+            // picshow
+            // 
+            this.picshow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.picshow.Cursor = System.Windows.Forms.Cursors.Default;
+            this.picshow.Image = global::BTL.Properties.Resources.visibility__2_;
+            this.picshow.Location = new System.Drawing.Point(271, 253);
+            this.picshow.Name = "picshow";
+            this.picshow.Size = new System.Drawing.Size(33, 24);
+            this.picshow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picshow.TabIndex = 3;
+            this.picshow.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BTL.Properties.Resources.login__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(123, 48);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // btnQL
             // 
@@ -96,6 +168,7 @@ namespace BTL
             this.btnSV.TabIndex = 1;
             this.btnSV.Text = "Đăng nhập với tư cách sinh viên ";
             this.btnSV.UseVisualStyleBackColor = false;
+            this.btnSV.Click += new System.EventHandler(this.btnSV_Click);
             // 
             // txtMK
             // 
@@ -124,67 +197,11 @@ namespace BTL
             this.txtDN.Enter += new System.EventHandler(this.txtDN_Enter);
             this.txtDN.Leave += new System.EventHandler(this.txtDN_Leave);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox2.Image = global::BTL.Properties.Resources.visibility__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(271, 253);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BTL.Properties.Resources.login__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(123, 48);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::BTL.Properties.Resources.NicePng_graduates_png_2904134;
-            this.pictureBox3.Location = new System.Drawing.Point(80, 64);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(220, 202);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(23, 315);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(352, 41);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.Text = "ĐĂNG KÝ TÍN CHỈ ";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox4.Location = new System.Drawing.Point(23, 536);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(315, 34);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.Text = "Design by: NTP Thảo, NC Nguyên, LVQ Trang.";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(157)))), ((int)(((byte)(209)))));
             this.ClientSize = new System.Drawing.Size(1261, 582);
             this.Controls.Add(this.panel2);
@@ -194,11 +211,12 @@ namespace BTL
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picshow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,9 +230,10 @@ namespace BTL
         private System.Windows.Forms.Button btnQL;
         private System.Windows.Forms.Button btnSV;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picshow;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.PictureBox picHide;
     }
 }
