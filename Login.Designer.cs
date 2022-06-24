@@ -57,8 +57,9 @@ namespace BTL
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(396, 582);
+            this.panel1.Size = new System.Drawing.Size(446, 728);
             this.panel1.TabIndex = 0;
             // 
             // textBox4
@@ -66,10 +67,11 @@ namespace BTL
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox4.Location = new System.Drawing.Point(23, 536);
+            this.textBox4.Location = new System.Drawing.Point(26, 670);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(315, 34);
+            this.textBox4.Size = new System.Drawing.Size(354, 42);
             this.textBox4.TabIndex = 2;
             this.textBox4.Text = "Design by: NTP Thảo, NC Nguyên, LVQ Trang.";
             // 
@@ -77,11 +79,12 @@ namespace BTL
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Location = new System.Drawing.Point(23, 315);
+            this.textBox3.Location = new System.Drawing.Point(26, 394);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(352, 41);
+            this.textBox3.Size = new System.Drawing.Size(396, 46);
             this.textBox3.TabIndex = 1;
             this.textBox3.Text = "ĐĂNG KÝ TÍN CHỈ ";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -89,9 +92,10 @@ namespace BTL
             // pictureBox3
             // 
             this.pictureBox3.Image = global::BTL.Properties.Resources.NicePng_graduates_png_2904134;
-            this.pictureBox3.Location = new System.Drawing.Point(80, 64);
+            this.pictureBox3.Location = new System.Drawing.Point(90, 80);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(220, 202);
+            this.pictureBox3.Size = new System.Drawing.Size(248, 252);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -106,19 +110,20 @@ namespace BTL
             this.panel2.Controls.Add(this.btnSV);
             this.panel2.Controls.Add(this.txtMK);
             this.panel2.Controls.Add(this.txtDN);
-            this.panel2.Location = new System.Drawing.Point(649, 50);
+            this.panel2.Location = new System.Drawing.Point(730, 62);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(358, 461);
+            this.panel2.Size = new System.Drawing.Size(403, 576);
             this.panel2.TabIndex = 1;
             // 
             // picHide
             // 
             this.picHide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.picHide.Cursor = System.Windows.Forms.Cursors.Default;
-            this.picHide.Image = global::BTL.Properties.Resources.eyes__1_;
-            this.picHide.Location = new System.Drawing.Point(310, 253);
+            this.picHide.Location = new System.Drawing.Point(349, 316);
+            this.picHide.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picHide.Name = "picHide";
-            this.picHide.Size = new System.Drawing.Size(33, 24);
+            this.picHide.Size = new System.Drawing.Size(37, 30);
             this.picHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picHide.TabIndex = 3;
             this.picHide.TabStop = false;
@@ -128,9 +133,10 @@ namespace BTL
             this.picshow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.picshow.Cursor = System.Windows.Forms.Cursors.Default;
             this.picshow.Image = global::BTL.Properties.Resources.visibility__2_;
-            this.picshow.Location = new System.Drawing.Point(271, 253);
+            this.picshow.Location = new System.Drawing.Point(305, 316);
+            this.picshow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picshow.Name = "picshow";
-            this.picshow.Size = new System.Drawing.Size(33, 24);
+            this.picshow.Size = new System.Drawing.Size(37, 30);
             this.picshow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picshow.TabIndex = 3;
             this.picshow.TabStop = false;
@@ -138,7 +144,8 @@ namespace BTL
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BTL.Properties.Resources.login__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(123, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(138, 60);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -150,9 +157,10 @@ namespace BTL
             this.btnQL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.btnQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnQL.ForeColor = System.Drawing.Color.White;
-            this.btnQL.Location = new System.Drawing.Point(37, 375);
+            this.btnQL.Location = new System.Drawing.Point(42, 469);
+            this.btnQL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQL.Name = "btnQL";
-            this.btnQL.Size = new System.Drawing.Size(287, 36);
+            this.btnQL.Size = new System.Drawing.Size(323, 45);
             this.btnQL.TabIndex = 1;
             this.btnQL.Text = "Đăng nhập với tư cách quản lý";
             this.btnQL.UseVisualStyleBackColor = false;
@@ -162,9 +170,10 @@ namespace BTL
             this.btnSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.btnSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSV.ForeColor = System.Drawing.Color.White;
-            this.btnSV.Location = new System.Drawing.Point(37, 317);
+            this.btnSV.Location = new System.Drawing.Point(42, 396);
+            this.btnSV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSV.Name = "btnSV";
-            this.btnSV.Size = new System.Drawing.Size(287, 36);
+            this.btnSV.Size = new System.Drawing.Size(323, 45);
             this.btnSV.TabIndex = 1;
             this.btnSV.Text = "Đăng nhập với tư cách sinh viên ";
             this.btnSV.UseVisualStyleBackColor = false;
@@ -175,12 +184,14 @@ namespace BTL
             this.txtMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(229)))), ((int)(((byte)(235)))));
-            this.txtMK.Location = new System.Drawing.Point(58, 249);
+            this.txtMK.Location = new System.Drawing.Point(65, 311);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMK.Multiline = true;
             this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(246, 32);
+            this.txtMK.Size = new System.Drawing.Size(276, 39);
             this.txtMK.TabIndex = 0;
             this.txtMK.Text = "Mật khẩu ";
+            this.txtMK.TextChanged += new System.EventHandler(this.txtMK_TextChanged);
             this.txtMK.Enter += new System.EventHandler(this.txtMK_Enter);
             this.txtMK.Leave += new System.EventHandler(this.txtMK_Leave);
             // 
@@ -189,25 +200,29 @@ namespace BTL
             this.txtDN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.txtDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtDN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(229)))), ((int)(((byte)(235)))));
-            this.txtDN.Location = new System.Drawing.Point(58, 215);
+            this.txtDN.Location = new System.Drawing.Point(65, 269);
+            this.txtDN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDN.Name = "txtDN";
-            this.txtDN.Size = new System.Drawing.Size(246, 32);
+            this.txtDN.Size = new System.Drawing.Size(276, 37);
             this.txtDN.TabIndex = 0;
             this.txtDN.Text = "Tên đăng nhập";
+            this.txtDN.TextChanged += new System.EventHandler(this.txtDN_TextChanged);
             this.txtDN.Enter += new System.EventHandler(this.txtDN_Enter);
             this.txtDN.Leave += new System.EventHandler(this.txtDN_Leave);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(157)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(1261, 582);
+            this.ClientSize = new System.Drawing.Size(1419, 728);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.Text = "Login";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

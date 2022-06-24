@@ -24,8 +24,15 @@ namespace BTL
 
         private void txtDN_Enter(object sender, EventArgs e)
         {
-            txtDN.Text = "";
-            txtDN.BackColor = Color.FromArgb(197, 173, 217);
+            if(txtDN.Text == "Tên đăng nhập")
+            {
+                txtDN.Text = "";
+                txtDN.BackColor = Color.FromArgb(197, 173, 217);
+            }
+            else
+            {
+                txtDN.BackColor = Color.FromArgb(197, 173, 217);
+            }
         }
 
         private void txtDN_Leave(object sender, EventArgs e)
@@ -39,6 +46,7 @@ namespace BTL
         {
             txtMK.Text = "";
             txtMK.BackColor = Color.FromArgb(197, 173, 217);
+            txtMK.PasswordChar = '*';
             picshow.BackColor= Color.FromArgb(197, 173, 217);
         }
 
@@ -53,6 +61,16 @@ namespace BTL
         {
             frmSV f = new frmSV();
             f.Show();
+        }
+
+        private void txtDN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMK_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
