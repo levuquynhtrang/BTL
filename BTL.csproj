@@ -57,6 +57,12 @@
     <Compile Include="FrmLSDK.Designer.cs">
       <DependentUpon>FrmLSDK.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQL.Designer.cs">
+      <DependentUpon>frmQL.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTCHP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLSDK.resx">
       <DependentUpon>FrmLSDK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQL.resx">
+      <DependentUpon>frmQL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTCHP.resx">
       <DependentUpon>frmTCHP.cs</DependentUpon>

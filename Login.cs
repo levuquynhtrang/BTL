@@ -44,17 +44,28 @@ namespace BTL
 
         private void txtMK_Enter(object sender, EventArgs e)
         {
-            txtMK.Text = "";
-            txtMK.BackColor = Color.FromArgb(197, 173, 217);
-            txtMK.PasswordChar = '*';
-            picshow.BackColor= Color.FromArgb(197, 173, 217);
-        }
+            /*if (txtMK.Text == "Mật khẩu")
+            {
+
+                txtMK.Text = "";
+                txtMK.BackColor = Color.FromArgb(197, 173, 217);
+                txtMK.PasswordChar = '*';
+                // txtMK.PasswordChar = '\0';
+            }
+            else { 
+                txtMK.Text = "";
+                txtMK.PasswordChar = '*';
+                txtMK.BackColor = Color.FromArgb(197, 173, 217);
+            }*/
+                //picHide.BackColor= Color.FromArgb(197, 173, 217);
+          }
 
         private void txtMK_Leave(object sender, EventArgs e)
         {
             if (txtMK.Text == "") txtMK.Text = "Mật khẩu";
+            if (txtMK.Text == "Mật khẩu") txtMK.PasswordChar = '\0';
             txtMK.BackColor = Color.FromArgb(68, 43, 99);
-            picshow.BackColor = Color.FromArgb(68, 43, 99);
+            picHide.BackColor = Color.FromArgb(68, 43, 99);
         }
 
         private void btnSV_Click(object sender, EventArgs e)
@@ -64,14 +75,34 @@ namespace BTL
             this.Visible = false;
         }
 
-        private void txtDN_TextChanged(object sender, EventArgs e)
+        private void picShow_Click(object sender, EventArgs e)
         {
-
+            txtMK.PasswordChar = '\0';
+            picHide.BringToFront();
         }
 
-        private void txtMK_TextChanged(object sender, EventArgs e)
+        private void picHide_Click(object sender, EventArgs e)
         {
+            txtMK.PasswordChar = '*';
+            picShow.BringToFront();
+        }
 
+        private void btnQL_Click(object sender, EventArgs e)
+        {
+            frmQL f = new frmQL();
+            f.Show();
+            this.Visible = false;
+        }
+
+        private void txtMK_Click(object sender, EventArgs e)
+        {
+            if (txtMK.Text=="Mật khẩu")
+            {
+                txtMK.Text = "";
+                txtMK.PasswordChar = '*';
+                txtMK.BackColor = Color.FromArgb(197, 173, 217);
+            }
+            
         }
     }
 }

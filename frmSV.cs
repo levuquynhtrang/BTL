@@ -19,39 +19,9 @@ namespace BTL
 
         private void trangchu_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Login f = new Login();
-            f.ShowDialog();
-            
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            frmSV f = new frmSV();
+            f.Show();
+            this.Close();
         }
 
         private void btnLSDKHP_Click(object sender, EventArgs e)
@@ -59,6 +29,27 @@ namespace BTL
             FrmLSDK f = new FrmLSDK();
             f.Show();
             this.Close();
+        }
+
+        private void btnDKHP_Click(object sender, EventArgs e)
+        {
+            frmSV f = new frmSV();
+            f.Show();
+            this.Close();
+        }
+
+        private void btnTCHP_Click(object sender, EventArgs e)
+        {
+            frmTCHP f = new frmTCHP();
+            f.Show();
+            this.Close();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Login f = new Login();
+            f.ShowDialog();
         }
     }
 }
