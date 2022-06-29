@@ -43,6 +43,7 @@ namespace BTL
             this.txtMK = new System.Windows.Forms.TextBox();
             this.txtDN = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblKhongCoGi = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -54,6 +55,7 @@ namespace BTL
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.panel1.Controls.Add(this.lblKhongCoGi);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -156,6 +158,7 @@ namespace BTL
             this.btnQL.TabIndex = 1;
             this.btnQL.Text = "Đăng nhập với tư cách quản lý";
             this.btnQL.UseVisualStyleBackColor = false;
+            this.btnQL.Click += new System.EventHandler(this.btnQL_Click);
             // 
             // btnSV
             // 
@@ -207,6 +210,14 @@ namespace BTL
             this.textBox1.Size = new System.Drawing.Size(100, 15);
             this.textBox1.TabIndex = 2;
             // 
+            // lblKhongCoGi
+            // 
+            this.lblKhongCoGi.AutoSize = true;
+            this.lblKhongCoGi.Location = new System.Drawing.Point(253, 13);
+            this.lblKhongCoGi.Name = "lblKhongCoGi";
+            this.lblKhongCoGi.Size = new System.Drawing.Size(0, 17);
+            this.lblKhongCoGi.TabIndex = 5;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -248,5 +259,6 @@ namespace BTL
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblKhongCoGi;
     }
 }

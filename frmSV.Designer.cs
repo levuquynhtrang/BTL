@@ -29,6 +29,12 @@ namespace BTL
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHDDK = new System.Windows.Forms.Button();
             this.btnDKHP = new System.Windows.Forms.Button();
             this.btnLSDKHP = new System.Windows.Forms.Button();
@@ -39,19 +45,31 @@ namespace BTL
             this.btnLogout = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.btnTrangChu = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grdMonHoc = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comNhomMon = new System.Windows.Forms.ComboBox();
             this.button9 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button10 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dKTCDataSet = new BTL.DKTCDataSet();
+            this.dKTCDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblMonHocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblMonHocTableAdapter = new BTL.DKTCDataSetTableAdapters.tblMonHocTableAdapter();
+            this.MaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNhomMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtKQDK = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMonHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMonHocBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHDDK
@@ -178,16 +196,31 @@ namespace BTL
             this.btnTrangChu.Text = "Trang chủ";
             this.btnTrangChu.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // grdMonHoc
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(324, 238);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(839, 130);
-            this.dataGridView1.TabIndex = 3;
+            this.grdMonHoc.AutoGenerateColumns = false;
+            this.grdMonHoc.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdMonHoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.grdMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdMonHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaMon,
+            this.TenMon,
+            this.SoTC,
+            this.MaNhomMonHoc});
+            this.grdMonHoc.DataSource = this.tblMonHocBindingSource;
+            this.grdMonHoc.Location = new System.Drawing.Point(324, 238);
+            this.grdMonHoc.Name = "grdMonHoc";
+            this.grdMonHoc.RowHeadersWidth = 51;
+            this.grdMonHoc.RowTemplate.Height = 24;
+            this.grdMonHoc.Size = new System.Drawing.Size(839, 317);
+            this.grdMonHoc.TabIndex = 3;
             // 
             // textBox1
             // 
@@ -213,15 +246,20 @@ namespace BTL
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(260, 39);
             this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Chương trình đào tạo:";
+            this.textBox2.Text = "Nhóm môn học";
             // 
-            // comboBox1
+            // comNhomMon
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(587, 198);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 24);
-            this.comboBox1.TabIndex = 6;
+            this.comNhomMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comNhomMon.FormattingEnabled = true;
+            this.comNhomMon.Items.AddRange(new object[] {
+            "Các môn đại cương",
+            "Các môn chuyên ngành"});
+            this.comNhomMon.Location = new System.Drawing.Point(532, 193);
+            this.comNhomMon.Name = "comNhomMon";
+            this.comNhomMon.Size = new System.Drawing.Size(292, 34);
+            this.comNhomMon.TabIndex = 6;
+            this.comNhomMon.SelectedIndexChanged += new System.EventHandler(this.comNhomMon_SelectedIndexChanged);
             // 
             // button9
             // 
@@ -242,18 +280,19 @@ namespace BTL
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Enabled = false;
-            this.dataGridView2.Location = new System.Drawing.Point(324, 384);
+            this.dataGridView2.Location = new System.Drawing.Point(324, 630);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(839, 153);
+            this.dataGridView2.Size = new System.Drawing.Size(839, 156);
             this.dataGridView2.TabIndex = 3;
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.White;
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button10.Location = new System.Drawing.Point(978, 545);
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(975, 792);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(185, 49);
             this.button10.TabIndex = 1;
@@ -271,32 +310,113 @@ namespace BTL
             this.panel3.Location = new System.Drawing.Point(0, 116);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(274, 491);
+            this.panel3.Size = new System.Drawing.Size(274, 737);
             this.panel3.TabIndex = 9;
+            // 
+            // dKTCDataSet
+            // 
+            this.dKTCDataSet.DataSetName = "DKTCDataSet";
+            this.dKTCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dKTCDataSetBindingSource
+            // 
+            this.dKTCDataSetBindingSource.DataSource = this.dKTCDataSet;
+            this.dKTCDataSetBindingSource.Position = 0;
+            // 
+            // tblMonHocBindingSource
+            // 
+            this.tblMonHocBindingSource.DataMember = "tblMonHoc";
+            this.tblMonHocBindingSource.DataSource = this.dKTCDataSetBindingSource;
+            // 
+            // tblMonHocTableAdapter
+            // 
+            this.tblMonHocTableAdapter.ClearBeforeFill = true;
+            // 
+            // MaMon
+            // 
+            this.MaMon.DataPropertyName = "MaMon";
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            this.MaMon.DefaultCellStyle = dataGridViewCellStyle17;
+            this.MaMon.HeaderText = "Mã môn học";
+            this.MaMon.MinimumWidth = 6;
+            this.MaMon.Name = "MaMon";
+            this.MaMon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.MaMon.Width = 150;
+            // 
+            // TenMon
+            // 
+            this.TenMon.DataPropertyName = "TenMon";
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            this.TenMon.DefaultCellStyle = dataGridViewCellStyle18;
+            this.TenMon.HeaderText = "Tên môn học";
+            this.TenMon.MinimumWidth = 6;
+            this.TenMon.Name = "TenMon";
+            this.TenMon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TenMon.Width = 280;
+            // 
+            // SoTC
+            // 
+            this.SoTC.DataPropertyName = "SoTC";
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            this.SoTC.DefaultCellStyle = dataGridViewCellStyle19;
+            this.SoTC.HeaderText = "Số tín chỉ";
+            this.SoTC.MinimumWidth = 6;
+            this.SoTC.Name = "SoTC";
+            this.SoTC.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.SoTC.Width = 125;
+            // 
+            // MaNhomMonHoc
+            // 
+            this.MaNhomMonHoc.DataPropertyName = "MaNhomMonHoc";
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.MaNhomMonHoc.DefaultCellStyle = dataGridViewCellStyle20;
+            this.MaNhomMonHoc.HeaderText = "MaNhomMonHoc";
+            this.MaNhomMonHoc.MinimumWidth = 6;
+            this.MaNhomMonHoc.Name = "MaNhomMonHoc";
+            this.MaNhomMonHoc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.MaNhomMonHoc.Visible = false;
+            this.MaNhomMonHoc.Width = 125;
+            // 
+            // txtKQDK
+            // 
+            this.txtKQDK.Location = new System.Drawing.Point(324, 576);
+            this.txtKQDK.Multiline = true;
+            this.txtKQDK.Name = "txtKQDK";
+            this.txtKQDK.Size = new System.Drawing.Size(530, 36);
+            this.txtKQDK.TabIndex = 10;
             // 
             // frmSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(157)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(1201, 607);
+            this.ClientSize = new System.Drawing.Size(1201, 853);
+            this.Controls.Add(this.txtKQDK);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comNhomMon);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grdMonHoc);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button10);
             this.Name = "frmSV";
             this.Text = "Đăng ký tín chỉ";
+            this.Load += new System.EventHandler(this.frmSV_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMonHoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMonHocBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,15 +432,24 @@ namespace BTL
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnTrangChu;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grdMonHoc;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comNhomMon;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.BindingSource dKTCDataSetBindingSource;
+        private DKTCDataSet dKTCDataSet;
+        private System.Windows.Forms.BindingSource tblMonHocBindingSource;
+        private DKTCDataSetTableAdapters.tblMonHocTableAdapter tblMonHocTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoTC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNhomMonHoc;
+        private System.Windows.Forms.TextBox txtKQDK;
     }
 }
 

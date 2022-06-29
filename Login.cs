@@ -65,7 +65,7 @@ namespace BTL
             if (txtMK.Text == "") txtMK.Text = "Mật khẩu";
             if (txtMK.Text == "Mật khẩu") txtMK.PasswordChar = '\0';
             txtMK.BackColor = Color.FromArgb(68, 43, 99);
-            picHide.BackColor = Color.FromArgb(68, 43, 99);
+           
         }
 
         private void btnSV_Click(object sender, EventArgs e)
@@ -104,5 +104,6 @@ namespace BTL
             }
             
         }
+
     }
 }

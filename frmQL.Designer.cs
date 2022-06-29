@@ -120,7 +120,7 @@ namespace BTL
             this.btnTk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTk.ForeColor = System.Drawing.Color.White;
-            this.btnTk.Location = new System.Drawing.Point(568, 200);
+            this.btnTk.Location = new System.Drawing.Point(650, 199);
             this.btnTk.Name = "btnTk";
             this.btnTk.Size = new System.Drawing.Size(115, 44);
             this.btnTk.TabIndex = 25;
@@ -129,9 +129,9 @@ namespace BTL
             // 
             // txtNhap_QL
             // 
-            this.txtNhap_QL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNhap_QL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(157)))), ((int)(((byte)(209)))));
-            this.txtNhap_QL.Location = new System.Drawing.Point(344, 209);
+            this.txtNhap_QL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhap_QL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.txtNhap_QL.Location = new System.Drawing.Point(442, 210);
             this.txtNhap_QL.Multiline = true;
             this.txtNhap_QL.Name = "txtNhap_QL";
             this.txtNhap_QL.Size = new System.Drawing.Size(192, 29);
@@ -151,7 +151,7 @@ namespace BTL
             "Tên Giảng Viên"});
             this.comTCHP.Location = new System.Drawing.Point(198, 208);
             this.comTCHP.Name = "comTCHP";
-            this.comTCHP.Size = new System.Drawing.Size(121, 30);
+            this.comTCHP.Size = new System.Drawing.Size(238, 30);
             this.comTCHP.TabIndex = 23;
             // 
             // label1
@@ -159,7 +159,7 @@ namespace BTL
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
-            this.label1.Location = new System.Drawing.Point(88, 208);
+            this.label1.Location = new System.Drawing.Point(88, 210);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 24);
             this.label1.TabIndex = 22;
@@ -185,7 +185,7 @@ namespace BTL
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1017, 235);
+            this.dataGridView1.Size = new System.Drawing.Size(1035, 257);
             this.dataGridView1.TabIndex = 26;
             // 
             // button1
@@ -195,7 +195,7 @@ namespace BTL
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(71, 531);
+            this.button1.Location = new System.Drawing.Point(71, 545);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(215, 50);
             this.button1.TabIndex = 27;
@@ -209,7 +209,7 @@ namespace BTL
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(897, 531);
+            this.button2.Location = new System.Drawing.Point(915, 545);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(191, 50);
             this.button2.TabIndex = 27;

@@ -2,16 +2,25 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using 
 
 namespace BTL
 {
     public partial class frmSV : Form
     {
+        SqlConnection conn = new SqlConnection();
+        SqlDataAdapter da = new SqlDataAdapter();
+        SqlCommand cmd = new SqlCommand();
+        DataTable dt = new DataTable();
+        string sql, constr;
+        int i;
+
         public frmSV()
         {
             InitializeComponent();
@@ -50,6 +59,39 @@ namespace BTL
             this.Visible = false;
             Login f = new Login();
             f.ShowDialog();
+        }
+
+        private void comNhomMon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comNhomMon.Text == "")
+            {
+                sql = "Select MaMon, TenMon, SoTC from tblMonHoc";
+            }
+            else if (comNhomMon.Text == "Các môn đại cương")
+            {
+                sql = "Select MaMon, TenMon, SoTC from tblMonHoc where MaNhomMonHoc='DC'";
+            }
+            else
+            {
+                sql = "Select MaMon, TenMon, SoTC from tblMonHoc where MaNhomMonHoc!='DC'";
+            }
+            dt.Clear();
+            da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt);
+            grdMonHoc.DataSource = dt;
+        }
+
+        private void frmSV_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dKTCDataSet.tblMonHoc' table. You can move, or remove it, as needed.
+            //this.tblMonHocTableAdapter.Fill(this.dKTCDataSet.tblMonHoc);
+
+            constr = @"Data Source=LAPTOP-F0TSIU3S;Initial Catalog=DKTC;Integrated Security=True";
+            conn.ConnectionString = constr;
+            sql = "Select MaMon, TenMon, SoTC from tblMonHoc";
+            da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt);
+            grdMonHoc.DataSource = dt;
         }
     }
 }
