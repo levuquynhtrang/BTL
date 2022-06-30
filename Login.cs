@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+
 namespace BTL
 {
     public partial class Login : Form
@@ -18,6 +19,7 @@ namespace BTL
         DataTable dt = new DataTable();
         string sql, constr;
         int i;
+        
         public Login()
         {
             InitializeComponent();
@@ -72,15 +74,16 @@ namespace BTL
                 SqlDataReader dta = cmd.ExecuteReader();
                 if (dta.Read() == true)
                 {
-                //this.Close();
-                frmSV f = new frmSV();
-                f.Show();
-                this.Hide();
-                //this.Close();
+                    //this.Close();
+                    frmSV f = new frmSV();
+                    f.maSV = txtDN.Text;
+                    f.Show();
+                    this.Hide();
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại");
+                    MessageBox.Show("Đăng nhập thất bại","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     conn.Close();
                 }
             /*}

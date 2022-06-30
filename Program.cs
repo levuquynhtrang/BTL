@@ -11,6 +11,7 @@ namespace BTL
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        //public static string maSV;
         [STAThread]
         static void Main()
         {

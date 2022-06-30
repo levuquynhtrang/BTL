@@ -50,6 +50,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DKTCDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DKTCDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DKTCDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmHPTD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +131,17 @@
     </None>
     <None Include="DKTCDataSet.xss">
       <DependentUpon>DKTCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DKTCDataSet1.xsc">
+      <DependentUpon>DKTCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DKTCDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DKTCDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DKTCDataSet1.xss">
+      <DependentUpon>DKTCDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

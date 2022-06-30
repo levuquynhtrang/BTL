@@ -14,13 +14,14 @@ namespace BTL
 {
     public partial class frmSV : Form
     {
+        public string maSV;
         SqlConnection conn = new SqlConnection();
         SqlDataAdapter da = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
         string sql, constr;
         int i;
-
+        
         public frmSV()
         {
             InitializeComponent();
@@ -77,13 +78,19 @@ namespace BTL
             }
             else
             {
-                sql = "Select MaMon, TenMon, SoTC from tblMonHoc where MaNhomMonHoc!='DC'";
+                sql = "Select MaMon, TenMon, SoTC from tblMonHoc,tblSV where tblSV.MaNhomMonHoc=tblMonHoc.MaNhomMonHoc and tblSV.MaSV = '"+txtInfor.Text+"'";
+
             }
             dt.Clear();
             da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
             grdMonHoc.DataSource = dt;
             //grdMonHoc.Visible = false;
+        }
+
+        private void txtInfor_TextChanged(object sender, EventArgs e)
+        {
+            //txtInfor.Text = msv + "|";
         }
 
         private void frmSV_Load(object sender, EventArgs e)
@@ -97,6 +104,7 @@ namespace BTL
             da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
             grdMonHoc.DataSource = dt;
+            txtInfor.Text = maSV;
         }
     }
 }
