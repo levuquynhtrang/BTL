@@ -131,7 +131,7 @@ namespace BTL
             this.panel3.Location = new System.Drawing.Point(0, 94);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(274, 513);
+            this.panel3.Size = new System.Drawing.Size(274, 759);
             this.panel3.TabIndex = 10;
             // 
             // btnHDDK
@@ -200,7 +200,7 @@ namespace BTL
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(895, 332);
+            this.dataGridView1.Size = new System.Drawing.Size(895, 536);
             this.dataGridView1.TabIndex = 11;
             // 
             // textBox1
@@ -273,7 +273,7 @@ namespace BTL
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(157)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(1201, 607);
+            this.ClientSize = new System.Drawing.Size(1201, 853);
             this.Controls.Add(this.btnTk);
             this.Controls.Add(this.txtNhap);
             this.Controls.Add(this.comTCHP);

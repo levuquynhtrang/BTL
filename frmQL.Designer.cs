@@ -185,7 +185,7 @@ namespace BTL
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1035, 257);
+            this.dataGridView1.Size = new System.Drawing.Size(1035, 479);
             this.dataGridView1.TabIndex = 26;
             // 
             // button1
@@ -195,7 +195,7 @@ namespace BTL
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(71, 545);
+            this.button1.Location = new System.Drawing.Point(71, 775);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(215, 50);
             this.button1.TabIndex = 27;
@@ -209,7 +209,7 @@ namespace BTL
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(915, 545);
+            this.button2.Location = new System.Drawing.Point(915, 775);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(191, 50);
             this.button2.TabIndex = 27;
@@ -221,7 +221,7 @@ namespace BTL
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(157)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(1201, 607);
+            this.ClientSize = new System.Drawing.Size(1201, 853);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);

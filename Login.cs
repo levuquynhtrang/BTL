@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace BTL
 {
     public partial class Login : Form
     {
+        SqlConnection conn = new SqlConnection();
+        SqlDataAdapter da = new SqlDataAdapter();
+        SqlCommand cmd = new SqlCommand();
+        DataTable dt = new DataTable();
+        string sql, constr;
+        int i;
         public Login()
         {
             InitializeComponent();
@@ -19,7 +25,8 @@ namespace BTL
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+            constr = @"Data Source=LAPTOP-F0TSIU3S;Initial Catalog=DKTC;Integrated Security=True";
+            conn.ConnectionString = constr;
         }
 
         private void txtDN_Enter(object sender, EventArgs e)
@@ -44,21 +51,8 @@ namespace BTL
 
         private void txtMK_Enter(object sender, EventArgs e)
         {
-            /*if (txtMK.Text == "Mật khẩu")
-            {
-
-                txtMK.Text = "";
-                txtMK.BackColor = Color.FromArgb(197, 173, 217);
-                txtMK.PasswordChar = '*';
-                // txtMK.PasswordChar = '\0';
-            }
-            else { 
-                txtMK.Text = "";
-                txtMK.PasswordChar = '*';
-                txtMK.BackColor = Color.FromArgb(197, 173, 217);
-            }*/
-                //picHide.BackColor= Color.FromArgb(197, 173, 217);
-          }
+            
+         }
 
         private void txtMK_Leave(object sender, EventArgs e)
         {
@@ -70,9 +64,30 @@ namespace BTL
 
         private void btnSV_Click(object sender, EventArgs e)
         {
-            frmSV f = new frmSV();
-            f.Show();
-            this.Visible = false;
+            //try
+            //{
+                conn.Open();
+                sql = "select * from tblSV where MaSV = '"+txtDN.Text+"' and MatKhau= '"+txtMK.Text+"'";
+                cmd = new SqlCommand(sql, conn);
+                SqlDataReader dta = cmd.ExecuteReader();
+                if (dta.Read() == true)
+                {
+                //this.Close();
+                frmSV f = new frmSV();
+                f.Show();
+                this.Hide();
+                //this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập thất bại");
+                    conn.Close();
+                }
+            /*}
+            catch
+            {
+                MessageBox.Show("Lỗi kết nối");
+            }*/
         }
 
         private void picShow_Click(object sender, EventArgs e)

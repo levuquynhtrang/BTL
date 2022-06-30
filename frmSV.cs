@@ -71,6 +71,10 @@ namespace BTL
             {
                 sql = "Select MaMon, TenMon, SoTC from tblMonHoc where MaNhomMonHoc='DC'";
             }
+            else if (comNhomMon.Text == "Tất cả các môn")
+            {
+                sql = "Select MaMon, TenMon, SoTC from tblMonHoc";
+            }
             else
             {
                 sql = "Select MaMon, TenMon, SoTC from tblMonHoc where MaNhomMonHoc!='DC'";
@@ -79,6 +83,7 @@ namespace BTL
             da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
             grdMonHoc.DataSource = dt;
+            //grdMonHoc.Visible = false;
         }
 
         private void frmSV_Load(object sender, EventArgs e)
