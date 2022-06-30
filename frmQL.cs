@@ -33,5 +33,12 @@ namespace BTL
             Login f = new Login();
             f.ShowDialog();
         }
+
+        private void frmQL_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dKTCDataSet1.tblLopHP' table. You can move, or remove it, as needed.
+            this.tblLopHPTableAdapter.Fill(this.dKTCDataSet1.tblLopHP);
+
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace BTL
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogoutQL = new System.Windows.Forms.Button();
@@ -42,9 +43,14 @@ namespace BTL
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.dKTCDataSet1 = new BTL.DKTCDataSet1();
+            this.tblLopHPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblLopHPTableAdapter = new BTL.DKTCDataSet1TableAdapters.tblLopHPTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -216,6 +222,20 @@ namespace BTL
             this.button2.Text = "Thêm học phần";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // dKTCDataSet1
+            // 
+            this.dKTCDataSet1.DataSetName = "DKTCDataSet1";
+            this.dKTCDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblLopHPBindingSource
+            // 
+            this.tblLopHPBindingSource.DataMember = "tblLopHP";
+            this.tblLopHPBindingSource.DataSource = this.dKTCDataSet1;
+            // 
+            // tblLopHPTableAdapter
+            // 
+            this.tblLopHPTableAdapter.ClearBeforeFill = true;
+            // 
             // frmQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -233,10 +253,13 @@ namespace BTL
             this.Controls.Add(this.panel1);
             this.Name = "frmQL";
             this.Text = "frmQL";
+            this.Load += new System.EventHandler(this.frmQL_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,5 +280,8 @@ namespace BTL
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private DKTCDataSet1 dKTCDataSet1;
+        private System.Windows.Forms.BindingSource tblLopHPBindingSource;
+        private DKTCDataSet1TableAdapters.tblLopHPTableAdapter tblLopHPTableAdapter;
     }
 }

@@ -19,7 +19,7 @@ namespace BTL
         SqlDataAdapter da = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
-        string sql, constr;
+        string sql, constr, s;
         int i;
         
         public frmSV()
@@ -93,8 +93,49 @@ namespace BTL
             //txtInfor.Text = msv + "|";
         }
 
+        private void btnDK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQuayVe_Click(object sender, EventArgs e)
+        {
+            if (grdMonHoc.Visible==false)
+            {
+                grdLopHP.Visible = false;
+                grdMonHoc.Visible = true;
+                dt.Clear();
+                sql = "Select MaMon, TenMon, SoTC from tblMonHoc";
+                da = new SqlDataAdapter(sql, conn);
+                da.Fill(dt);
+                grdMonHoc.DataSource = dt;
+            }
+            
+        }
+
+        private void grdMonHoc_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            i = grdMonHoc.CurrentRow.Index;
+            s = grdMonHoc.Rows[i].Cells["MaMon"].Value.ToString();
+            sql = "select * from tblLopHP Where MaMon = '"+s+"'";
+            grdMonHoc.Visible=false;
+            if (grdLopHP.Visible==false) grdLopHP.Visible = true;
+            dt.Clear();
+            da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt);
+            grdLopHP.DataSource = dt;
+        }
+
         private void frmSV_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dKTCDataSet2.tblLopHP' table. You can move, or remove it, as needed.
+            this.tblLopHPTableAdapter2.Fill(this.dKTCDataSet2.tblLopHP);
+            // TODO: This line of code loads data into the 'dKTCDataSet2.tblMonHoc' table. You can move, or remove it, as needed.
+            this.tblMonHocTableAdapter1.Fill(this.dKTCDataSet2.tblMonHoc);
+            // TODO: This line of code loads data into the 'dKTCDataSet1.tblLopHP' table. You can move, or remove it, as needed.
+            this.tblLopHPTableAdapter1.Fill(this.dKTCDataSet1.tblLopHP);
+            // TODO: This line of code loads data into the 'dKTCDataSet.tblLopHP' table. You can move, or remove it, as needed.
+            this.tblLopHPTableAdapter.Fill(this.dKTCDataSet.tblLopHP);
             // TODO: This line of code loads data into the 'dKTCDataSet.tblMonHoc' table. You can move, or remove it, as needed.
             //this.tblMonHocTableAdapter.Fill(this.dKTCDataSet.tblMonHoc);
 

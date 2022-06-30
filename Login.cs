@@ -74,7 +74,7 @@ namespace BTL
                 SqlDataReader dta = cmd.ExecuteReader();
                 if (dta.Read() == true)
                 {
-                    //this.Close();
+                    //this.Close();*/
                     frmSV f = new frmSV();
                     f.maSV = txtDN.Text;
                     f.Show();
