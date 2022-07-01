@@ -29,6 +29,7 @@ namespace BTL
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TextBox txtNhap;
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogoutTCHP = new System.Windows.Forms.Button();
@@ -44,8 +45,8 @@ namespace BTL
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comTCHP = new System.Windows.Forms.ComboBox();
-            this.txtNhap = new System.Windows.Forms.TextBox();
             this.btnTk = new System.Windows.Forms.Button();
+            txtNhap = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -54,7 +55,7 @@ namespace BTL
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnTrangChuTCHP);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -77,7 +78,7 @@ namespace BTL
             // btnLogoutTCHP
             // 
             this.btnLogoutTCHP.AutoSize = true;
-            this.btnLogoutTCHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.btnLogoutTCHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.btnLogoutTCHP.FlatAppearance.BorderSize = 0;
             this.btnLogoutTCHP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogoutTCHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -92,7 +93,7 @@ namespace BTL
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -106,7 +107,7 @@ namespace BTL
             // 
             // btnTrangChuTCHP
             // 
-            this.btnTrangChuTCHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.btnTrangChuTCHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.btnTrangChuTCHP.FlatAppearance.BorderSize = 0;
             this.btnTrangChuTCHP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTrangChuTCHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -121,7 +122,7 @@ namespace BTL
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(157)))), ((int)(((byte)(209)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(218)))), ((int)(((byte)(231)))));
             this.panel3.Controls.Add(this.btnHDDK);
             this.panel3.Controls.Add(this.btnDKHP_TCHP);
             this.panel3.Controls.Add(this.btnHPTD);
@@ -138,6 +139,7 @@ namespace BTL
             // 
             this.btnHDDK.BackColor = System.Drawing.Color.White;
             this.btnHDDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnHDDK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.btnHDDK.Location = new System.Drawing.Point(12, 16);
             this.btnHDDK.Name = "btnHDDK";
             this.btnHDDK.Size = new System.Drawing.Size(240, 60);
@@ -149,6 +151,7 @@ namespace BTL
             // 
             this.btnDKHP_TCHP.BackColor = System.Drawing.Color.White;
             this.btnDKHP_TCHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDKHP_TCHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.btnDKHP_TCHP.Location = new System.Drawing.Point(12, 92);
             this.btnDKHP_TCHP.Name = "btnDKHP_TCHP";
             this.btnDKHP_TCHP.Size = new System.Drawing.Size(240, 60);
@@ -161,6 +164,7 @@ namespace BTL
             // 
             this.btnHPTD.BackColor = System.Drawing.Color.White;
             this.btnHPTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnHPTD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.btnHPTD.Location = new System.Drawing.Point(12, 320);
             this.btnHPTD.Name = "btnHPTD";
             this.btnHPTD.Size = new System.Drawing.Size(240, 60);
@@ -172,6 +176,7 @@ namespace BTL
             // 
             this.btnTCHP.BackColor = System.Drawing.Color.White;
             this.btnTCHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTCHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.btnTCHP.Location = new System.Drawing.Point(12, 244);
             this.btnTCHP.Name = "btnTCHP";
             this.btnTCHP.Size = new System.Drawing.Size(240, 60);
@@ -183,6 +188,7 @@ namespace BTL
             // 
             this.btnLSDKHP_TCHP.BackColor = System.Drawing.Color.White;
             this.btnLSDKHP_TCHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLSDKHP_TCHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.btnLSDKHP_TCHP.Location = new System.Drawing.Point(12, 168);
             this.btnLSDKHP_TCHP.Name = "btnLSDKHP_TCHP";
             this.btnLSDKHP_TCHP.Size = new System.Drawing.Size(240, 60);
@@ -205,7 +211,7 @@ namespace BTL
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
@@ -221,7 +227,7 @@ namespace BTL
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.label1.Location = new System.Drawing.Point(314, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 24);
@@ -243,20 +249,20 @@ namespace BTL
             // 
             // txtNhap
             // 
-            this.txtNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(157)))), ((int)(((byte)(209)))));
-            this.txtNhap.Location = new System.Drawing.Point(570, 175);
-            this.txtNhap.Multiline = true;
-            this.txtNhap.Name = "txtNhap";
-            this.txtNhap.Size = new System.Drawing.Size(192, 29);
-            this.txtNhap.TabIndex = 20;
-            this.txtNhap.Text = "Nhập từ khóa";
-            this.txtNhap.Click += new System.EventHandler(this.txtNhap_Click);
-            this.txtNhap.Leave += new System.EventHandler(this.txtNhap_Leave);
+            txtNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            txtNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
+            txtNhap.Location = new System.Drawing.Point(570, 175);
+            txtNhap.Multiline = true;
+            txtNhap.Name = "txtNhap";
+            txtNhap.Size = new System.Drawing.Size(192, 29);
+            txtNhap.TabIndex = 20;
+            txtNhap.Text = "Nhập từ khóa";
+            txtNhap.Click += new System.EventHandler(this.txtNhap_Click);
+            txtNhap.Leave += new System.EventHandler(this.txtNhap_Leave);
             // 
             // btnTk
             // 
-            this.btnTk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.btnTk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.btnTk.FlatAppearance.BorderSize = 0;
             this.btnTk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -272,10 +278,10 @@ namespace BTL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(157)))), ((int)(((byte)(209)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(218)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(1201, 853);
             this.Controls.Add(this.btnTk);
-            this.Controls.Add(this.txtNhap);
+            this.Controls.Add(txtNhap);
             this.Controls.Add(this.comTCHP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -312,7 +318,8 @@ namespace BTL
         private System.Windows.Forms.Button btnHPTD;
         private System.Windows.Forms.Button btnTCHP;
         private System.Windows.Forms.Button btnLSDKHP_TCHP;
-        private System.Windows.Forms.TextBox txtNhap;
         private System.Windows.Forms.Button btnTk;
+        private System.Windows.Forms.TextBox txtNhap;
+
     }
 }

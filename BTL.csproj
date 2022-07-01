@@ -65,6 +65,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DKTCDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DKTCDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DKTCDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DKTCDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DKTCDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdd.Designer.cs">
+      <DependentUpon>frmAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLSDK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +113,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdd.resx">
+      <DependentUpon>frmAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLSDK.resx">
       <DependentUpon>FrmLSDK.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +184,28 @@
     </None>
     <None Include="DKTCDataSet3.xss">
       <DependentUpon>DKTCDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DKTCDataSet4.xsc">
+      <DependentUpon>DKTCDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DKTCDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DKTCDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DKTCDataSet4.xss">
+      <DependentUpon>DKTCDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DKTCDataSet5.xsc">
+      <DependentUpon>DKTCDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DKTCDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DKTCDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DKTCDataSet5.xss">
+      <DependentUpon>DKTCDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

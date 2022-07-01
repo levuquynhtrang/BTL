@@ -118,6 +118,11 @@ namespace BTL
             
         }
 
+        private void btnHDDK_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://drive.google.com/file/d/12JMQuaUM5f-qtzbkeuIcPQQ4qk41XCnY/view");
+        }
+
         private void grdMonHoc_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             i = grdMonHoc.CurrentRow.Index;
@@ -133,14 +138,16 @@ namespace BTL
 
         private void frmSV_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dKTCDataSet5.tblKQDangKi' table. You can move, or remove it, as needed.
+            this.tblKQDangKiTableAdapter.Fill(this.dKTCDataSet5.tblKQDangKi);
             // TODO: This line of code loads data into the 'dKTCDataSet2.tblLopHP' table. You can move, or remove it, as needed.
-          //s.tblLopHPTableAdapter2.Fill(this.dKTCDataSet2.tblLopHP);
+            //s.tblLopHPTableAdapter2.Fill(this.dKTCDataSet2.tblLopHP);
             // TODO: This line of code loads data into the 'dKTCDataSet2.tblMonHoc' table. You can move, or remove it, as needed.
-           // this.tblMonHocTableAdapter1.Fill(this.dKTCDataSet2.tblMonHoc);
+            // this.tblMonHocTableAdapter1.Fill(this.dKTCDataSet2.tblMonHoc);
             // TODO: This line of code loads data into the 'dKTCDataSet1.tblLopHP' table. You can move, or remove it, as needed.
-           // this.tblLopHPTableAdapter1.Fill(this.dKTCDataSet1.tblLopHP);
+            // this.tblLopHPTableAdapter1.Fill(this.dKTCDataSet1.tblLopHP);
             // TODO: This line of code loads data into the 'dKTCDataSet.tblLopHP' table. You can move, or remove it, as needed.
-           // this.tblLopHPTableAdapter.Fill(this.dKTCDataSet.tblLopHP);
+            // this.tblLopHPTableAdapter.Fill(this.dKTCDataSet.tblLopHP);
             // TODO: This line of code loads data into the 'dKTCDataSet.tblMonHoc' table. You can move, or remove it, as needed.
             //this.tblMonHocTableAdapter.Fill(this.dKTCDataSet.tblMonHoc);
 

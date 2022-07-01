@@ -37,18 +37,18 @@ namespace BTL
             if(txtDN.Text == "Tên đăng nhập")
             {
                 txtDN.Text = "";
-                txtDN.BackColor = Color.FromArgb(197, 173, 217);
+                txtDN.BackColor = Color.FromArgb(200, 218, 231);
             }
             else
             {
-                txtDN.BackColor = Color.FromArgb(197, 173, 217);
+                txtDN.BackColor = Color.FromArgb(200, 218, 231);
             }
         }
 
         private void txtDN_Leave(object sender, EventArgs e)
         {
             if (txtDN.Text == "") { txtDN.Text = "Tên đăng nhập"; };
-            txtDN.BackColor = Color.FromArgb(68, 43, 99);
+            txtDN.BackColor = Color.FromArgb(30, 75, 114);
 
         }
 
@@ -61,7 +61,7 @@ namespace BTL
         {
             if (txtMK.Text == "") txtMK.Text = "Mật khẩu";
             if (txtMK.Text == "Mật khẩu") txtMK.PasswordChar = '\0';
-            txtMK.BackColor = Color.FromArgb(68, 43, 99);
+            txtMK.BackColor = Color.FromArgb(30, 75, 114);
            
         }
 
@@ -113,13 +113,18 @@ namespace BTL
             this.Visible = false;
         }
 
+        private void txtDN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtMK_Click(object sender, EventArgs e)
         {
             if (txtMK.Text=="Mật khẩu")
             {
                 txtMK.Text = "";
                 txtMK.PasswordChar = '*';
-                txtMK.BackColor = Color.FromArgb(197, 173, 217);
+                txtMK.BackColor = Color.FromArgb(200, 218, 231);
             }
             
         }

@@ -49,5 +49,12 @@ namespace BTL
             f.Show();
             this.Close();
         }
+
+        private void FrmLSDK_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dKTCDataSet5.tblLSDK' table. You can move, or remove it, as needed.
+            this.tblLSDKTableAdapter.Fill(this.dKTCDataSet5.tblLSDK);
+
+        }
     }
 }
