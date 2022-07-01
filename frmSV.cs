@@ -19,6 +19,7 @@ namespace BTL
         SqlDataAdapter da = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
+        DataTable dt1 = new DataTable();
         string sql, constr, s;
         int i;
         
@@ -29,30 +30,33 @@ namespace BTL
 
         private void trangchu_Click(object sender, EventArgs e)
         {
-            frmSV f = new frmSV();
-            f.Show();
-            this.Close();
+            //frmSV f = new frmSV();
+            //f.Show();
+            //this.Close();
+            txtInfor.Text = maSV;
         }
 
         private void btnLSDKHP_Click(object sender, EventArgs e)
         {
             FrmLSDK f = new FrmLSDK();
             f.Show();
-            this.Close();
+            //this.Close();
+            //txtInfor.Text = maSV;
         }
 
         private void btnDKHP_Click(object sender, EventArgs e)
         {
-            frmSV f = new frmSV();
-            f.Show();
-            this.Close();
+            //frmSV f = new frmSV();
+            // f.Show();
+            // this.Close();
+            txtInfor.Text = maSV;
         }
 
         private void btnTCHP_Click(object sender, EventArgs e)
         {
-            frmTCHP f = new frmTCHP();
-            f.Show();
-            this.Close();
+            //frmTCHP f = new frmTCHP();
+            //f.Show();
+            //this.Close();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -74,7 +78,7 @@ namespace BTL
             }
             else if (comNhomMon.Text == "Tất cả các môn")
             {
-                sql = "Select MaMon, TenMon, SoTC from tblMonHoc";
+                sql = "Select MaMon, TenMon, SoTC from tblMonHoc,tblSV  where MaNhomMonHoc='DC'and tblSV.MaNhomMonHoc=tblMonHoc.MaNhomMonHoc and tblSV.MaSV = '" + txtInfor.Text + "'";
             }
             else
             {
@@ -91,6 +95,7 @@ namespace BTL
         private void txtInfor_TextChanged(object sender, EventArgs e)
         {
             //txtInfor.Text = msv + "|";
+            //txtInfor.Text = maSV;
         }
 
         private void btnDK_Click(object sender, EventArgs e)
@@ -146,6 +151,14 @@ namespace BTL
             da.Fill(dt);
             grdMonHoc.DataSource = dt;
             txtInfor.Text = maSV;
+            
+
+            //dt.Clear();
+            sql = "select TenSV from tblSV where MaSV = '" + txtInfor.Text + "'";
+            da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt1);
+            txtHoTen.Text = dt1.Rows[0]["TenSV"].ToString();
+            
         }
     }
 }

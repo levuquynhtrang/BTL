@@ -31,16 +31,16 @@ namespace BTL
 
         private void btnTrangChuLSDK_Click(object sender, EventArgs e)
         {
-            frmSV f = new frmSV();
-            f.Show();
-            this.Close();
+            //frmSV f = new frmSV();
+            //f.Show();
+            //this.Close();
         }
 
         private void btnDKHP_LSDK_Click(object sender, EventArgs e)
         {
-            frmSV f = new frmSV();
-            f.Show();
-            this.Close();
+            //frmSV f = new frmSV();
+            //f.Show();
+           // this.Close();
         }
 
         private void btnTCHP_LSDK_Click(object sender, EventArgs e)

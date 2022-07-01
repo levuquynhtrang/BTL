@@ -31,6 +31,7 @@ namespace BTL
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblKhongCoGi = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -43,7 +44,6 @@ namespace BTL
             this.txtMK = new System.Windows.Forms.TextBox();
             this.txtDN = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblKhongCoGi = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,6 +64,14 @@ namespace BTL
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(396, 582);
             this.panel1.TabIndex = 0;
+            // 
+            // lblKhongCoGi
+            // 
+            this.lblKhongCoGi.AutoSize = true;
+            this.lblKhongCoGi.Location = new System.Drawing.Point(253, 13);
+            this.lblKhongCoGi.Name = "lblKhongCoGi";
+            this.lblKhongCoGi.Size = new System.Drawing.Size(0, 17);
+            this.lblKhongCoGi.TabIndex = 5;
             // 
             // label2
             // 
@@ -209,14 +217,6 @@ namespace BTL
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 15);
             this.textBox1.TabIndex = 2;
-            // 
-            // lblKhongCoGi
-            // 
-            this.lblKhongCoGi.AutoSize = true;
-            this.lblKhongCoGi.Location = new System.Drawing.Point(253, 13);
-            this.lblKhongCoGi.Name = "lblKhongCoGi";
-            this.lblKhongCoGi.Size = new System.Drawing.Size(0, 17);
-            this.lblKhongCoGi.TabIndex = 5;
             // 
             // Login
             // 

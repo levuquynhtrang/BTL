@@ -60,12 +60,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DKTCDataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmHPTD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHPTD.Designer.cs">
-      <DependentUpon>frmHPTD.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmLSDK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,9 +92,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmHPTD.resx">
-      <DependentUpon>frmHPTD.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmLSDK.resx">
       <DependentUpon>FrmLSDK.cs</DependentUpon>
     </EmbeddedResource>
