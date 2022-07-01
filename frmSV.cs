@@ -134,17 +134,17 @@ namespace BTL
         private void frmSV_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dKTCDataSet2.tblLopHP' table. You can move, or remove it, as needed.
-            this.tblLopHPTableAdapter2.Fill(this.dKTCDataSet2.tblLopHP);
+          //s.tblLopHPTableAdapter2.Fill(this.dKTCDataSet2.tblLopHP);
             // TODO: This line of code loads data into the 'dKTCDataSet2.tblMonHoc' table. You can move, or remove it, as needed.
-            this.tblMonHocTableAdapter1.Fill(this.dKTCDataSet2.tblMonHoc);
+           // this.tblMonHocTableAdapter1.Fill(this.dKTCDataSet2.tblMonHoc);
             // TODO: This line of code loads data into the 'dKTCDataSet1.tblLopHP' table. You can move, or remove it, as needed.
-            this.tblLopHPTableAdapter1.Fill(this.dKTCDataSet1.tblLopHP);
+           // this.tblLopHPTableAdapter1.Fill(this.dKTCDataSet1.tblLopHP);
             // TODO: This line of code loads data into the 'dKTCDataSet.tblLopHP' table. You can move, or remove it, as needed.
-            this.tblLopHPTableAdapter.Fill(this.dKTCDataSet.tblLopHP);
+           // this.tblLopHPTableAdapter.Fill(this.dKTCDataSet.tblLopHP);
             // TODO: This line of code loads data into the 'dKTCDataSet.tblMonHoc' table. You can move, or remove it, as needed.
             //this.tblMonHocTableAdapter.Fill(this.dKTCDataSet.tblMonHoc);
 
-            constr = @"Data Source=LAPTOP-F0TSIU3S;Initial Catalog=DKTC;Integrated Security=True";
+            constr = "Data Source=LVQT\\MSSQLSEVER01;Initial Catalog=DKTC;Integrated Security=True";
             conn.ConnectionString = constr;
             sql = "Select MaMon, TenMon, SoTC from tblMonHoc";
             da = new SqlDataAdapter(sql, conn);

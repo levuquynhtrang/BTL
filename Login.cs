@@ -27,8 +27,9 @@ namespace BTL
 
         private void Login_Load(object sender, EventArgs e)
         {
-            constr = @"Data Source=LAPTOP-F0TSIU3S;Initial Catalog=DKTC;Integrated Security=True";
+            constr = "Data Source = LVQT\\MSSQLSEVER01; Initial Catalog = DKTC; Integrated Security = True";
             conn.ConnectionString = constr;
+            conn.Open();
         }
 
         private void txtDN_Enter(object sender, EventArgs e)
@@ -68,7 +69,7 @@ namespace BTL
         {
             //try
             //{
-                conn.Open();
+                
                 sql = "select * from tblSV where MaSV = '"+txtDN.Text+"' and MatKhau= '"+txtMK.Text+"'";
                 cmd = new SqlCommand(sql, conn);
                 SqlDataReader dta = cmd.ExecuteReader();
@@ -84,7 +85,7 @@ namespace BTL
                 else
                 {
                     MessageBox.Show("Đăng nhập thất bại","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    conn.Close();
+                    
                 }
             /*}
             catch
