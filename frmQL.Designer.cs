@@ -30,6 +30,14 @@ namespace BTL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogoutQL = new System.Windows.Forms.Button();
@@ -48,16 +56,34 @@ namespace BTL
             this.giangVienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phongHocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tietHocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sSHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblLopHPBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dKTCDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dKTCDataSet5 = new BTL.DKTCDataSet5();
             this.tblLopHPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dKTCDataSet1 = new BTL.DKTCDataSet1();
             this.button1 = new System.Windows.Forms.Button();
             this.btnThemmoi = new System.Windows.Forms.Button();
             this.tblLopHPTableAdapter = new BTL.DKTCDataSet1TableAdapters.tblLopHPTableAdapter();
+            this.tblLopHPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblLopHPTableAdapter1 = new BTL.DKTCDataSet5TableAdapters.tblLopHPTableAdapter();
+            this.dKTCDataSet4 = new BTL.DKTCDataSet4();
+            this.tblLopHPBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblLopHPTableAdapter2 = new BTL.DKTCDataSet4TableAdapters.tblLopHPTableAdapter();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnFix = new System.Windows.Forms.Button();
+            this.txtIndex = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdQL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet5BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -195,6 +221,7 @@ namespace BTL
             // 
             // grdQL
             // 
+            this.grdQL.AllowUserToAddRows = false;
             this.grdQL.AutoGenerateColumns = false;
             this.grdQL.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.grdQL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -205,8 +232,9 @@ namespace BTL
             this.siSoDataGridViewTextBoxColumn,
             this.giangVienDataGridViewTextBoxColumn,
             this.phongHocDataGridViewTextBoxColumn,
-            this.tietHocDataGridViewTextBoxColumn});
-            this.grdQL.DataSource = this.tblLopHPBindingSource;
+            this.tietHocDataGridViewTextBoxColumn,
+            this.sSHienTaiDataGridViewTextBoxColumn});
+            this.grdQL.DataSource = this.tblLopHPBindingSource3;
             this.grdQL.Location = new System.Drawing.Point(71, 270);
             this.grdQL.Name = "grdQL";
             this.grdQL.RowHeadersWidth = 51;
@@ -217,66 +245,97 @@ namespace BTL
             // maLopHPDataGridViewTextBoxColumn
             // 
             this.maLopHPDataGridViewTextBoxColumn.DataPropertyName = "MaLopHP";
-            this.maLopHPDataGridViewTextBoxColumn.Frozen = true;
-            this.maLopHPDataGridViewTextBoxColumn.HeaderText = "MaLopHP";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.maLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.maLopHPDataGridViewTextBoxColumn.HeaderText = "Mã LHP";
             this.maLopHPDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maLopHPDataGridViewTextBoxColumn.Name = "maLopHPDataGridViewTextBoxColumn";
-            this.maLopHPDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.maLopHPDataGridViewTextBoxColumn.Width = 125;
+            this.maLopHPDataGridViewTextBoxColumn.Width = 80;
             // 
             // maMonDataGridViewTextBoxColumn
             // 
             this.maMonDataGridViewTextBoxColumn.DataPropertyName = "MaMon";
-            this.maMonDataGridViewTextBoxColumn.HeaderText = "MaMon";
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.maMonDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.maMonDataGridViewTextBoxColumn.HeaderText = "Mã môn";
             this.maMonDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maMonDataGridViewTextBoxColumn.Name = "maMonDataGridViewTextBoxColumn";
-            this.maMonDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.maMonDataGridViewTextBoxColumn.Width = 90;
+            this.maMonDataGridViewTextBoxColumn.Width = 70;
             // 
             // tenLopHPDataGridViewTextBoxColumn
             // 
             this.tenLopHPDataGridViewTextBoxColumn.DataPropertyName = "TenLopHP";
-            this.tenLopHPDataGridViewTextBoxColumn.HeaderText = "TenLopHP";
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tenLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            this.tenLopHPDataGridViewTextBoxColumn.HeaderText = "Tên LHP";
             this.tenLopHPDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenLopHPDataGridViewTextBoxColumn.Name = "tenLopHPDataGridViewTextBoxColumn";
-            this.tenLopHPDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.tenLopHPDataGridViewTextBoxColumn.Width = 125;
             // 
             // siSoDataGridViewTextBoxColumn
             // 
             this.siSoDataGridViewTextBoxColumn.DataPropertyName = "SiSo";
-            this.siSoDataGridViewTextBoxColumn.HeaderText = "SiSo";
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.siSoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            this.siSoDataGridViewTextBoxColumn.HeaderText = "Sĩ số";
             this.siSoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.siSoDataGridViewTextBoxColumn.Name = "siSoDataGridViewTextBoxColumn";
-            this.siSoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.siSoDataGridViewTextBoxColumn.Width = 60;
+            this.siSoDataGridViewTextBoxColumn.Width = 40;
             // 
             // giangVienDataGridViewTextBoxColumn
             // 
             this.giangVienDataGridViewTextBoxColumn.DataPropertyName = "GiangVien";
-            this.giangVienDataGridViewTextBoxColumn.HeaderText = "GiangVien";
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.giangVienDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            this.giangVienDataGridViewTextBoxColumn.HeaderText = "Giảng viên";
             this.giangVienDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.giangVienDataGridViewTextBoxColumn.Name = "giangVienDataGridViewTextBoxColumn";
-            this.giangVienDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.giangVienDataGridViewTextBoxColumn.Width = 125;
+            this.giangVienDataGridViewTextBoxColumn.Width = 140;
             // 
             // phongHocDataGridViewTextBoxColumn
             // 
             this.phongHocDataGridViewTextBoxColumn.DataPropertyName = "PhongHoc";
-            this.phongHocDataGridViewTextBoxColumn.HeaderText = "PhongHoc";
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.phongHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            this.phongHocDataGridViewTextBoxColumn.HeaderText = "Phòng học";
             this.phongHocDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.phongHocDataGridViewTextBoxColumn.Name = "phongHocDataGridViewTextBoxColumn";
-            this.phongHocDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.phongHocDataGridViewTextBoxColumn.Width = 125;
+            this.phongHocDataGridViewTextBoxColumn.Width = 60;
             // 
             // tietHocDataGridViewTextBoxColumn
             // 
             this.tietHocDataGridViewTextBoxColumn.DataPropertyName = "TietHoc";
-            this.tietHocDataGridViewTextBoxColumn.HeaderText = "TietHoc";
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tietHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            this.tietHocDataGridViewTextBoxColumn.HeaderText = "Tiết học";
             this.tietHocDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tietHocDataGridViewTextBoxColumn.Name = "tietHocDataGridViewTextBoxColumn";
-            this.tietHocDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.tietHocDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sSHienTaiDataGridViewTextBoxColumn
+            // 
+            this.sSHienTaiDataGridViewTextBoxColumn.DataPropertyName = "SSHienTai";
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.sSHienTaiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            this.sSHienTaiDataGridViewTextBoxColumn.HeaderText = "Sĩ số hiện tại";
+            this.sSHienTaiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sSHienTaiDataGridViewTextBoxColumn.Name = "sSHienTaiDataGridViewTextBoxColumn";
+            this.sSHienTaiDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // tblLopHPBindingSource3
+            // 
+            this.tblLopHPBindingSource3.DataMember = "tblLopHP";
+            this.tblLopHPBindingSource3.DataSource = this.dKTCDataSet5BindingSource;
+            // 
+            // dKTCDataSet5BindingSource
+            // 
+            this.dKTCDataSet5BindingSource.DataSource = this.dKTCDataSet5;
+            this.dKTCDataSet5BindingSource.Position = 0;
+            // 
+            // dKTCDataSet5
+            // 
+            this.dKTCDataSet5.DataSetName = "DKTCDataSet5";
+            this.dKTCDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblLopHPBindingSource
             // 
@@ -315,11 +374,71 @@ namespace BTL
             this.btnThemmoi.TabIndex = 27;
             this.btnThemmoi.Text = "Thêm học phần";
             this.btnThemmoi.UseVisualStyleBackColor = false;
-            this.btnThemmoi.Click += new System.EventHandler(this.btnThemmoi_Click_1);
             // 
             // tblLopHPTableAdapter
             // 
             this.tblLopHPTableAdapter.ClearBeforeFill = true;
+            // 
+            // tblLopHPBindingSource1
+            // 
+            this.tblLopHPBindingSource1.DataMember = "tblLopHP";
+            this.tblLopHPBindingSource1.DataSource = this.dKTCDataSet5;
+            // 
+            // tblLopHPTableAdapter1
+            // 
+            this.tblLopHPTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dKTCDataSet4
+            // 
+            this.dKTCDataSet4.DataSetName = "DKTCDataSet4";
+            this.dKTCDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblLopHPBindingSource2
+            // 
+            this.tblLopHPBindingSource2.DataMember = "tblLopHP";
+            this.tblLopHPBindingSource2.DataSource = this.dKTCDataSet4;
+            // 
+            // tblLopHPTableAdapter2
+            // 
+            this.tblLopHPTableAdapter2.ClearBeforeFill = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(757, 775);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(111, 50);
+            this.btnDelete.TabIndex = 27;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnFix
+            // 
+            this.btnFix.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
+            this.btnFix.FlatAppearance.BorderSize = 0;
+            this.btnFix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFix.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFix.ForeColor = System.Drawing.Color.White;
+            this.btnFix.Location = new System.Drawing.Point(616, 775);
+            this.btnFix.Name = "btnFix";
+            this.btnFix.Size = new System.Drawing.Size(111, 50);
+            this.btnFix.TabIndex = 27;
+            this.btnFix.Text = "Sửa";
+            this.btnFix.UseVisualStyleBackColor = false;
+            this.btnFix.Click += new System.EventHandler(this.btnFix_Click);
+            // 
+            // txtIndex
+            // 
+            this.txtIndex.Location = new System.Drawing.Point(1131, 407);
+            this.txtIndex.Name = "txtIndex";
+            this.txtIndex.Size = new System.Drawing.Size(29, 22);
+            this.txtIndex.TabIndex = 28;
+            this.txtIndex.Visible = false;
             // 
             // frmQL
             // 
@@ -327,6 +446,9 @@ namespace BTL
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(218)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(1201, 853);
+            this.Controls.Add(this.txtIndex);
+            this.Controls.Add(this.btnFix);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnThemmoi);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.grdQL);
@@ -343,8 +465,14 @@ namespace BTL
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdQL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet5BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,6 +495,15 @@ namespace BTL
         private DKTCDataSet1 dKTCDataSet1;
         private System.Windows.Forms.BindingSource tblLopHPBindingSource;
         private DKTCDataSet1TableAdapters.tblLopHPTableAdapter tblLopHPTableAdapter;
+        public System.Windows.Forms.DataGridView grdQL;
+        private DKTCDataSet5 dKTCDataSet5;
+        private System.Windows.Forms.BindingSource tblLopHPBindingSource1;
+        private DKTCDataSet5TableAdapters.tblLopHPTableAdapter tblLopHPTableAdapter1;
+        private DKTCDataSet4 dKTCDataSet4;
+        private System.Windows.Forms.BindingSource tblLopHPBindingSource2;
+        private DKTCDataSet4TableAdapters.tblLopHPTableAdapter tblLopHPTableAdapter2;
+        private System.Windows.Forms.BindingSource tblLopHPBindingSource3;
+        private System.Windows.Forms.BindingSource dKTCDataSet5BindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn maLopHPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maMonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenLopHPDataGridViewTextBoxColumn;
@@ -374,6 +511,9 @@ namespace BTL
         private System.Windows.Forms.DataGridViewTextBoxColumn giangVienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phongHocDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tietHocDataGridViewTextBoxColumn;
-        public System.Windows.Forms.DataGridView grdQL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sSHienTaiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnFix;
+        public System.Windows.Forms.TextBox txtIndex;
     }
 }

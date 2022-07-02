@@ -39,6 +39,7 @@ namespace BTL
         private void btnLSDKHP_Click(object sender, EventArgs e)
         {
             FrmLSDK f = new FrmLSDK();
+            f.MaSV = txtInfor.Text;
             f.Show();
             //this.Close();
             //txtInfor.Text = maSV;
@@ -54,7 +55,7 @@ namespace BTL
 
         private void btnTCHP_Click(object sender, EventArgs e)
         {
-            //frmTCHP f = new frmTCHP();
+            //TCHP f = new TCHP();
             //f.Show();
             //this.Close();
         }
@@ -139,7 +140,7 @@ namespace BTL
         private void frmSV_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dKTCDataSet5.tblKQDangKi' table. You can move, or remove it, as needed.
-            this.tblKQDangKiTableAdapter.Fill(this.dKTCDataSet5.tblKQDangKi);
+            //this.tblKQDangKiTableAdapter.Fill(this.dKTCDataSet5.tblKQDangKi);
             // TODO: This line of code loads data into the 'dKTCDataSet2.tblLopHP' table. You can move, or remove it, as needed.
             //s.tblLopHPTableAdapter2.Fill(this.dKTCDataSet2.tblLopHP);
             // TODO: This line of code loads data into the 'dKTCDataSet2.tblMonHoc' table. You can move, or remove it, as needed.

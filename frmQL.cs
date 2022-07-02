@@ -17,9 +17,34 @@ namespace BTL
         SqlDataAdapter da = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
-        DataTable dt1 = new DataTable();
-        string sql, constr, s;
-        int i;
+        string sql, constr;
+        frmAdd ADD;
+        int index;
+        public frmQL(frmAdd add)
+        {
+            this.ADD = add;
+            InitializeComponent();
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string maLopHP;
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa bản ghi hiện thời?", "Xác nhận yêu cầu", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int i = Convert.ToInt16(grdQL.CurrentRow.Index.ToString());
+                maLopHP = grdQL.Rows[i].Cells[0].Value.ToString();
+                //MessageBox.Show(maLopHP);
+                sql = "Delete from tblLopHP where MaLopHP ='" + maLopHP + "'";
+                //cmd = new SqlCommand(sql,conn);
+                //cmd.CommandText = sql;
+                //cmd.ExecuteNonQuery();
+                clsMain.DoSQL(sql);
+                dt.Clear();
+                sql = "Select * From tblLopHP";
+                da = new SqlDataAdapter(sql, conn);
+                da.Fill(dt);
+                grdQL.DataSource = dt;
+            }
+        }
 
         public frmQL()
         {
@@ -48,19 +73,19 @@ namespace BTL
             dt.Clear();
             if (comTCHP.Text == "")
             {
-                sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc from tblLopHP";
+                sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc,SSHienTai from tblLopHP";
             }
             else if (comTCHP.Text == "Tên HP")
             {
-                sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc from tblLopHP Where TenLopHP= '" + txtNhap_QL.Text + "'";
+                sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc,SSHienTai from tblLopHP Where TenLopHP= '" + txtNhap_QL.Text + "'";
             }
             else if (comTCHP.Text == "Mã HP")
             {
-                sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc from tblLopHP Where MaLopHP= '" + txtNhap_QL.Text + "'";
+                sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc,SSHienTai from tblLopHP Where MaLopHP= '" + txtNhap_QL.Text + "'";
             }
             else if (comTCHP.Text == "Tên Giảng Viên")
             {
-                sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc from tblLopHP Where GiangVien= '" + txtNhap_QL.Text + "'";
+                sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc.SSHienTai from tblLopHP Where GiangVien= '" + txtNhap_QL.Text + "'";
             }
             da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
@@ -74,23 +99,43 @@ namespace BTL
             f.Show();
         }
 
-        private void btnThemmoi_Click_1(object sender, EventArgs e)
-        {
-            frmAdd f = new frmAdd(this);
-            f.Show();
-        }
-
         private void frmQL_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dKTCDataSet4.tblLopHP' table. You can move, or remove it, as needed.
+           // this.tblLopHPTableAdapter2.Fill(this.dKTCDataSet4.tblLopHP);
+            // TODO: This line of code loads data into the 'dKTCDataSet5.tblLopHP' table. You can move, or remove it, as needed.
+            //this.tblLopHPTableAdapter1.Fill(this.dKTCDataSet5.tblLopHP);
             // TODO: This line of code loads data into the 'dKTCDataSet1.tblLopHP' table. You can move, or remove it, as needed.
             //this.tblLopHPTableAdapter.Fill(this.dKTCDataSet1.tblLopHP);
             constr = "Data Source=LVQT\\MSSQLSEVER01;Initial Catalog=DKTC;Integrated Security=True";
             conn.ConnectionString = constr;
-            sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc from tblLopHP";
+            sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc,SSHienTai from tblLopHP";
             da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
             grdQL.DataSource = dt;
 
+        }
+
+        private void btnFix_Click(object sender, EventArgs e)
+        {
+            
+            index = Convert.ToInt16(grdQL.CurrentRow.Index.ToString());
+            frmAdd f = new frmAdd(this);
+            f.Show();
+            //MessageBox.Show(i.ToString());
+            f.txtMaHP.Text= grdQL.Rows[index].Cells[0].Value.ToString();
+            f.txtMaHP.Text = f.txtMaHP.Text.Trim();
+            f.txtMaMon.Text = grdQL.Rows[index].Cells[1].Value.ToString();
+            f.txtMaMon.Text = f.txtMaMon.Text.Trim();
+            f.txtLopHP.Text = grdQL.Rows[index].Cells[2].Value.ToString();
+            f.txtSiSo.Text = grdQL.Rows[index].Cells[3].Value.ToString();
+            f.txtGiangVien.Text = grdQL.Rows[index].Cells[4].Value.ToString();
+            f.txtPhongHoc.Text = grdQL.Rows[index].Cells[5].Value.ToString();
+            f.txtTietHoc.Text = grdQL.Rows[index].Cells[6].Value.ToString();
+            f.txtSSHT.Text = grdQL.Rows[index].Cells[7].Value.ToString();
+            //MessageBox.Show(f.txtMaMon.Text) ;
+            //f.txtMaHP.Focus();
+            txtIndex.Text=index.ToString();
         }
 
         private void comTCHP_SelectedIndexChanged(object sender, EventArgs e)
