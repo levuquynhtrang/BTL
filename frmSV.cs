@@ -16,7 +16,7 @@ namespace BTL
     {
         public string maSV;
         SqlConnection conn = new SqlConnection();
-        SqlConnection conn2 = new SqlConnection();
+        //SqlConnection conn2 = new SqlConnection();
         SqlDataAdapter da = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
@@ -24,6 +24,7 @@ namespace BTL
         DataTable dt2 = new DataTable();
         DataTable dt3 = new DataTable();
         DataTable dt4 = new DataTable();
+        DataTable dt5 = new DataTable();
 
         string sql, constr, s;
         int i;
@@ -76,28 +77,27 @@ namespace BTL
 
         private void comNhomMon_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comNhomMon.Text == "")
+            if (comNhomMon.Text == "Các môn đại cương")
             {
-                sql = "Select MaMon, TenMon, SoTC from tblMonHoc";
-            }
-            else if (comNhomMon.Text == "Các môn đại cương")
-            {
-                sql = "Select MaMon, TenMon, SoTC from tblMonHoc where MaNhomMonHoc='DC'";
+                sql = "Select * from tblMonHoc where MaNhomMonHoc='DC'";
             }
             else if (comNhomMon.Text == "Tất cả các môn")
             {
-                sql = "Select MaMon, TenMon, SoTC from tblMonHoc,tblSV  where MaNhomMonHoc='DC'and tblSV.MaNhomMonHoc=tblMonHoc.MaNhomMonHoc and tblSV.MaSV = '" + txtInfor.Text + "'";
+                sql = "Select distinct MaMon, TenMon, SoTC, tblMonHoc.MaNhomMonHoc, MaMonTienQuyet from tblMonHoc,tblSV where tblMonHoc.MaNhomMonHoc='DC'or " +
+                         "(tblSV.MaNhomMonHoc=tblMonHoc.MaNhomMonHoc and tblSV.MaSV = '" + txtInfor.Text + "')";
             }
             else
             {
-                sql = "Select MaMon, TenMon, SoTC from tblMonHoc,tblSV where tblSV.MaNhomMonHoc=tblMonHoc.MaNhomMonHoc and tblSV.MaSV = '"+txtInfor.Text+"'";
+                sql = "Select * from tblMonHoc,tblSV where tblSV.MaNhomMonHoc=tblMonHoc.MaNhomMonHoc " +
+                    "and tblSV.MaSV = '" + txtInfor.Text + "'";
 
             }
             dt.Clear();
             da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
             grdMonHoc.DataSource = dt;
-            //grdMonHoc.Visible = false;
+
+
         }
 
         private void txtInfor_TextChanged(object sender, EventArgs e)
@@ -108,8 +108,8 @@ namespace BTL
 
         private void btnDK_Click(object sender, EventArgs e)
         {
-            string maSV, maLopHP, tenMon, hk, namHoc, tietHoc, phongHoc, giangVien;
-            int soTC;
+            string maSV, maLopHP, tenMon, hk, namHoc, tietHoc, phongHoc, giangVien, sshtSTring;
+            int soTC, ssht;
             i = grdLopHP.CurrentRow.Index;
             maSV = txtInfor.Text;
             maLopHP = grdLopHP.Rows[i].Cells["MaLopHP"].Value.ToString();
@@ -119,8 +119,9 @@ namespace BTL
             tietHoc = grdLopHP.Rows[i].Cells["TietHoc"].Value.ToString();
             phongHoc = grdLopHP.Rows[i].Cells["PhongHoc"].Value.ToString();
             giangVien = grdLopHP.Rows[i].Cells["GiangVien"].Value.ToString();
+            sshtSTring = grdLopHP.Rows[i].Cells["SSHienTai"].Value.ToString();
             soTC = int.Parse(stc);
-
+            ssht = int.Parse(sshtSTring);
             //Xem môn học tồn tại trong LSDK chưa
             sql = "select MaMon from tblLSDK where MaSV='" + maSV + "' and MaMon = '" + maMH + "'";
             da = new SqlDataAdapter(sql, conn);
@@ -157,6 +158,16 @@ namespace BTL
                         cmd.CommandText = sql;
                         cmd.ExecuteNonQuery();
                         NapLai();
+                        NapTong();
+                        //Them
+                        MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        sql = "Update tblLopHP set SSHienTai = SSHienTai+1 where MaLopHP = '" + maLopHP + "'";
+                        cmd.Connection = conn;
+                        cmd.CommandText = sql;
+                        cmd.ExecuteNonQuery();
+                        grdLopHP.Rows[i].Cells["SSHienTai"].Value = ssht + 1;
+
                     }
                     else
                     {
@@ -173,6 +184,38 @@ namespace BTL
             {
                 MessageBox.Show("Môn học " + tenMon + " đã tồn tại trong lịch sử đăng kí", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            /*sql = "insert into tblKQDangKi values ('"+maSV+"','"+maLopHP+"',N'"+tenMon+"',"+soTC+",'"
+                +hk+"','"+namHoc+"','"+tietHoc+"','"+phongHoc+"',N'"+giangVien+"')";
+            cmd.Connection = conn;
+            cmd.CommandText = sql;
+            cmd.ExecuteNonQuery();
+            NapLai();*/
+        }
+        private void XoaHP_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn chắc chắc muốn hóa học phần này không?(Y?N)", "Xac nhan yeu cau",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                i = grdKQDK.CurrentRow.Index;
+                s = grdKQDK.Rows[i].Cells["MaLopHP_KQ"].Value.ToString();
+                sql = "Delete from tblKQDangKi where MaLopHP = '" + s + "'";
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+
+                sql = "Delete from tblLSDK where MaLopHP = '" + s + "'";
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+
+                sql = "Update tblLopHP set SSHienTai = SSHienTai-1 where MaLopHP = '" + s + "'";
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+
+                grdKQDK.Rows.RemoveAt(i);
+            }
+            NapTong();
         }
 
         private void btnQuayVe_Click(object sender, EventArgs e)
@@ -182,7 +225,8 @@ namespace BTL
                 grdLopHP.Visible = false;
                 grdMonHoc.Visible = true;
                 dt2.Clear();
-                sql = "Select * from tblMonHoc";
+                sql = "Select distinct MaMon, TenMon, SoTC, tblMonHoc.MaNhomMonHoc, MaMonTienQuyet from tblMonHoc,tblSV where tblMonHoc.MaNhomMonHoc='DC'or " +
+                   "(tblSV.MaNhomMonHoc=tblMonHoc.MaNhomMonHoc and tblSV.MaSV = '" + txtInfor.Text + "')";
                 da = new SqlDataAdapter(sql, conn);
                 da.Fill(dt2);
                 grdMonHoc.DataSource = dt2;
@@ -215,34 +259,16 @@ namespace BTL
 
         private void frmSV_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dKTCDataSet5.tblLopHP' table. You can move, or remove it, as needed.
-            this.tblLopHPTableAdapter3.Fill(this.dKTCDataSet5.tblLopHP);
-            // TODO: This line of code loads data into the 'dKTCDataSet5.tblMonHoc' table. You can move, or remove it, as needed.
-            this.tblMonHocTableAdapter2.Fill(this.dKTCDataSet5.tblMonHoc);
-            // TODO: This line of code loads data into the 'dKTCDataSet5.tblKQDangKi' table. You can move, or remove it, as needed.
-            //this.tblKQDangKiTableAdapter.Fill(this.dKTCDataSet5.tblKQDangKi);
-            // TODO: This line of code loads data into the 'dKTCDataSet2.tblLopHP' table. You can move, or remove it, as needed.
-            //s.tblLopHPTableAdapter2.Fill(this.dKTCDataSet2.tblLopHP);
-            // TODO: This line of code loads data into the 'dKTCDataSet2.tblMonHoc' table. You can move, or remove it, as needed.
-            // this.tblMonHocTableAdapter1.Fill(this.dKTCDataSet2.tblMonHoc);
-            // TODO: This line of code loads data into the 'dKTCDataSet1.tblLopHP' table. You can move, or remove it, as needed.
-            // this.tblLopHPTableAdapter1.Fill(this.dKTCDataSet1.tblLopHP);
-            // TODO: This line of code loads data into the 'dKTCDataSet.tblLopHP' table. You can move, or remove it, as needed.
-            // this.tblLopHPTableAdapter.Fill(this.dKTCDataSet.tblLopHP);
-            // TODO: This line of code loads data into the 'dKTCDataSet.tblMonHoc' table. You can move, or remove it, as needed.
-            //this.tblMonHocTableAdapter.Fill(this.dKTCDataSet.tblMonHoc);
-
             constr = "Data Source=LVQT\\MSSQLSEVER01;Initial Catalog=DKTC;Integrated Security=True";
             conn.ConnectionString = constr;
-            conn2.ConnectionString = constr;
             conn.Open();
             dt.Clear();
-            sql = "Select * from tblMonHoc";
+            txtInfor.Text = maSV;
+            sql = "Select distinct MaMon, TenMon, SoTC, tblMonHoc.MaNhomMonHoc, MaMonTienQuyet from tblMonHoc,tblSV where tblMonHoc.MaNhomMonHoc='DC'or " +
+            "(tblSV.MaNhomMonHoc=tblMonHoc.MaNhomMonHoc and tblSV.MaSV = '" + txtInfor.Text + "')";
             da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
             grdMonHoc.DataSource = dt;
-            txtInfor.Text = maSV;
-
 
             dt1.Clear();
             sql = "select TenSV from tblSV where MaSV = '" + txtInfor.Text + "'";
@@ -255,17 +281,33 @@ namespace BTL
             da = new SqlDataAdapter(sql, conn);
             da.Fill(dt3);
             grdKQDK.DataSource = dt3;
+            NapTong();
 
         }
         public void NapLai()
         {
-
             sql = "Select * From tblKQDangKi";
             da = new SqlDataAdapter(sql, conn);
             dt4.Clear();
             da.Fill(dt4);
             grdKQDK.DataSource = dt4;
             grdKQDK.Refresh();
+        }
+        public void NapTong()
+        {
+            dt5.Clear();
+            sql = "select count(MaLopHP) as SoLuongHP from tblKQDangKi where MaSV = '" + txtInfor.Text + "'";
+            da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt5);
+            //txtHoTen.Text = dt1.Rows[0]["TenSV"].ToString();
+            txtTongHP.Text = dt5.Rows[0]["SoLuongHP"].ToString();
+
+            dt5.Clear();
+            sql = "select sum(SoTC) as TongTC from tblKQDangKi where MaSV = '" + txtInfor.Text + "'";
+            da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt5);
+            //txtHoTen.Text = dt1.Rows[0]["TenSV"].ToString();
+            txtTongSoTC.Text = dt5.Rows[0]["TongTC"].ToString();
         }
 
     }

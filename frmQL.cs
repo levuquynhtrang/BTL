@@ -17,12 +17,19 @@ namespace BTL
         SqlDataAdapter da = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
+        DataTable dt1 = new DataTable();
         string sql, constr;
         frmAdd ADD;
+        frmThongTinLopHoc TTLH;
         int index;
         public frmQL(frmAdd add)
         {
             this.ADD = add;
+            InitializeComponent();
+        }
+        public frmQL(frmThongTinLopHoc ttlp)
+        {
+            this.TTLH = ttlp;
             InitializeComponent();
         }
         private void btnDelete_Click(object sender, EventArgs e)
@@ -113,7 +120,7 @@ namespace BTL
             da = new SqlDataAdapter(sql, conn);
             da.Fill(dt);
             grdQL.DataSource = dt;
-
+            //conn.Open();
         }
 
         private void btnFix_Click(object sender, EventArgs e)
@@ -136,6 +143,51 @@ namespace BTL
             //MessageBox.Show(f.txtMaMon.Text) ;
             //f.txtMaHP.Focus();
             txtIndex.Text=index.ToString();
+        }
+
+        private void grdQL_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = Convert.ToInt16(grdQL.CurrentRow.Index.ToString());
+            frmThongTinLopHoc f = new frmThongTinLopHoc(this);
+            f.Show();
+            f.txtMaLHP.Text = grdQL.Rows[index].Cells[0].Value.ToString();
+            //f.txtMaLHP.Text = f.txtMaLHP.Text.Trim();
+            f.txtMaMon.Text = grdQL.Rows[index].Cells[1].Value.ToString();
+            //f.txtMaMon.Text = f.txtMaMon.Text.Trim();
+            f.txtTenHP.Text = grdQL.Rows[index].Cells[2].Value.ToString();
+            f.txtSiSo.Text = grdQL.Rows[index].Cells[7].Value.ToString()+"/"+ grdQL.Rows[index].Cells[3].Value.ToString();
+            f.txtGiangVien.Text = grdQL.Rows[index].Cells[4].Value.ToString();
+            f.txtPhongHoc.Text = grdQL.Rows[index].Cells[5].Value.ToString();
+            f.txtTietHoc.Text = grdQL.Rows[index].Cells[6].Value.ToString();
+            //txtIndex.Text = index.ToString();
+            sql="Select tblSV.MaSV, tblSV.TenSV, tblSV.MaNhomMonHoc from tblSV, tblLSDK where tblSV.MaSV=tblLSDK.MaSV and tblLSDK.MaLopHP='" + f.txtMaLHP.Text +"'";
+            dt1.Clear();
+            da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt1);
+            f.grdDSSV.DataSource = dt1;
+            //ShowDialog();
+           // NapLai();
+            
+        }
+        public void NapLai()
+        {
+
+            //constr = "Data Source=(local);Initial Catalog=BanHang;Integrated Security=True";
+            //conn.ConnectionString = constr;
+            //conn.Open();
+            sql = "Select * From tblLopHP";
+            da = new SqlDataAdapter(sql, conn);
+            dt.Clear();
+            da.Fill(dt);
+            grdQL.DataSource = dt;
+            
+            grdQL.Refresh();
+        }
+
+        private void btnThemmoi_Click_1(object sender, EventArgs e)
+        {
+            frmAdd f = new frmAdd(this);
+            f.Show();
         }
 
         private void comTCHP_SelectedIndexChanged(object sender, EventArgs e)

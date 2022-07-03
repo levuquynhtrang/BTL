@@ -30,14 +30,14 @@ namespace BTL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogoutQL = new System.Windows.Forms.Button();
@@ -241,12 +241,13 @@ namespace BTL
             this.grdQL.RowTemplate.Height = 24;
             this.grdQL.Size = new System.Drawing.Size(1035, 479);
             this.grdQL.TabIndex = 26;
+            this.grdQL.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdQL_CellContentDoubleClick);
             // 
             // maLopHPDataGridViewTextBoxColumn
             // 
             this.maLopHPDataGridViewTextBoxColumn.DataPropertyName = "MaLopHP";
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.maLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.maLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.maLopHPDataGridViewTextBoxColumn.HeaderText = "Mã LHP";
             this.maLopHPDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maLopHPDataGridViewTextBoxColumn.Name = "maLopHPDataGridViewTextBoxColumn";
@@ -255,8 +256,8 @@ namespace BTL
             // maMonDataGridViewTextBoxColumn
             // 
             this.maMonDataGridViewTextBoxColumn.DataPropertyName = "MaMon";
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.maMonDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.maMonDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.maMonDataGridViewTextBoxColumn.HeaderText = "Mã môn";
             this.maMonDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maMonDataGridViewTextBoxColumn.Name = "maMonDataGridViewTextBoxColumn";
@@ -265,8 +266,8 @@ namespace BTL
             // tenLopHPDataGridViewTextBoxColumn
             // 
             this.tenLopHPDataGridViewTextBoxColumn.DataPropertyName = "TenLopHP";
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tenLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tenLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.tenLopHPDataGridViewTextBoxColumn.HeaderText = "Tên LHP";
             this.tenLopHPDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenLopHPDataGridViewTextBoxColumn.Name = "tenLopHPDataGridViewTextBoxColumn";
@@ -275,8 +276,8 @@ namespace BTL
             // siSoDataGridViewTextBoxColumn
             // 
             this.siSoDataGridViewTextBoxColumn.DataPropertyName = "SiSo";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.siSoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.siSoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.siSoDataGridViewTextBoxColumn.HeaderText = "Sĩ số";
             this.siSoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.siSoDataGridViewTextBoxColumn.Name = "siSoDataGridViewTextBoxColumn";
@@ -285,8 +286,8 @@ namespace BTL
             // giangVienDataGridViewTextBoxColumn
             // 
             this.giangVienDataGridViewTextBoxColumn.DataPropertyName = "GiangVien";
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.giangVienDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.giangVienDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.giangVienDataGridViewTextBoxColumn.HeaderText = "Giảng viên";
             this.giangVienDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.giangVienDataGridViewTextBoxColumn.Name = "giangVienDataGridViewTextBoxColumn";
@@ -295,8 +296,8 @@ namespace BTL
             // phongHocDataGridViewTextBoxColumn
             // 
             this.phongHocDataGridViewTextBoxColumn.DataPropertyName = "PhongHoc";
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.phongHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.phongHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.phongHocDataGridViewTextBoxColumn.HeaderText = "Phòng học";
             this.phongHocDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.phongHocDataGridViewTextBoxColumn.Name = "phongHocDataGridViewTextBoxColumn";
@@ -305,8 +306,8 @@ namespace BTL
             // tietHocDataGridViewTextBoxColumn
             // 
             this.tietHocDataGridViewTextBoxColumn.DataPropertyName = "TietHoc";
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tietHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tietHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.tietHocDataGridViewTextBoxColumn.HeaderText = "Tiết học";
             this.tietHocDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tietHocDataGridViewTextBoxColumn.Name = "tietHocDataGridViewTextBoxColumn";
@@ -315,8 +316,8 @@ namespace BTL
             // sSHienTaiDataGridViewTextBoxColumn
             // 
             this.sSHienTaiDataGridViewTextBoxColumn.DataPropertyName = "SSHienTai";
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.sSHienTaiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.sSHienTaiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.sSHienTaiDataGridViewTextBoxColumn.HeaderText = "Sĩ số hiện tại";
             this.sSHienTaiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.sSHienTaiDataGridViewTextBoxColumn.Name = "sSHienTaiDataGridViewTextBoxColumn";
@@ -374,6 +375,7 @@ namespace BTL
             this.btnThemmoi.TabIndex = 27;
             this.btnThemmoi.Text = "Thêm học phần";
             this.btnThemmoi.UseVisualStyleBackColor = false;
+            this.btnThemmoi.Click += new System.EventHandler(this.btnThemmoi_Click_1);
             // 
             // tblLopHPTableAdapter
             // 

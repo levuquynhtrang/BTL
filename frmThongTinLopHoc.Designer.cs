@@ -46,12 +46,7 @@ namespace BTL
             this.txtGiangVien = new System.Windows.Forms.TextBox();
             this.txtPhongHoc = new System.Windows.Forms.TextBox();
             this.txtTietHoc = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maSVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenSVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maNhomMonHocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdDSSV = new System.Windows.Forms.DataGridView();
             this.tblSVBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dKTCDataSet5 = new BTL.DKTCDataSet5();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,8 +57,12 @@ namespace BTL
             this.tblSVBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblSVTableAdapter = new BTL.DKTCDataSet5TableAdapters.tblSVTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.maSVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenSVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNhomMonHocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDSSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblSVBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet5BindingSource)).BeginInit();
@@ -176,15 +175,17 @@ namespace BTL
             // 
             // txtMaLHP
             // 
+            this.txtMaLHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMaLHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.txtMaLHP.Location = new System.Drawing.Point(122, 65);
             this.txtMaLHP.Multiline = true;
             this.txtMaLHP.Name = "txtMaLHP";
-            this.txtMaLHP.Size = new System.Drawing.Size(88, 29);
+            this.txtMaLHP.Size = new System.Drawing.Size(150, 29);
             this.txtMaLHP.TabIndex = 2;
             // 
             // txtMaMon
             // 
+            this.txtMaMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMaMon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.txtMaMon.Location = new System.Drawing.Point(122, 103);
             this.txtMaMon.Multiline = true;
@@ -194,6 +195,7 @@ namespace BTL
             // 
             // txtTenHP
             // 
+            this.txtTenHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTenHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.txtTenHP.Location = new System.Drawing.Point(122, 141);
             this.txtTenHP.Multiline = true;
@@ -203,6 +205,7 @@ namespace BTL
             // 
             // txtSiSo
             // 
+            this.txtSiSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSiSo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.txtSiSo.Location = new System.Drawing.Point(122, 179);
             this.txtSiSo.Multiline = true;
@@ -212,6 +215,7 @@ namespace BTL
             // 
             // txtGiangVien
             // 
+            this.txtGiangVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGiangVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.txtGiangVien.Location = new System.Drawing.Point(122, 222);
             this.txtGiangVien.Multiline = true;
@@ -221,6 +225,7 @@ namespace BTL
             // 
             // txtPhongHoc
             // 
+            this.txtPhongHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtPhongHoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.txtPhongHoc.Location = new System.Drawing.Point(122, 257);
             this.txtPhongHoc.Multiline = true;
@@ -230,6 +235,7 @@ namespace BTL
             // 
             // txtTietHoc
             // 
+            this.txtTietHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTietHoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.txtTietHoc.Location = new System.Drawing.Point(122, 297);
             this.txtTietHoc.Multiline = true;
@@ -237,65 +243,23 @@ namespace BTL
             this.txtTietHoc.Size = new System.Drawing.Size(131, 29);
             this.txtTietHoc.TabIndex = 2;
             // 
-            // dataGridView1
+            // grdDSSV
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stt,
+            this.grdDSSV.AutoGenerateColumns = false;
+            this.grdDSSV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.grdDSSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdDSSV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maSVDataGridViewTextBoxColumn,
             this.tenSVDataGridViewTextBoxColumn,
             this.matKhauDataGridViewTextBoxColumn,
             this.maNhomMonHocDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblSVBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(493, 136);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(608, 371);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // stt
-            // 
-            this.stt.DataPropertyName = "MaSV";
-            this.stt.HeaderText = "STT";
-            this.stt.MinimumWidth = 6;
-            this.stt.Name = "stt";
-            this.stt.Width = 60;
-            // 
-            // maSVDataGridViewTextBoxColumn
-            // 
-            this.maSVDataGridViewTextBoxColumn.DataPropertyName = "MaSV";
-            this.maSVDataGridViewTextBoxColumn.HeaderText = "Mã sinh viên";
-            this.maSVDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maSVDataGridViewTextBoxColumn.Name = "maSVDataGridViewTextBoxColumn";
-            this.maSVDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // tenSVDataGridViewTextBoxColumn
-            // 
-            this.tenSVDataGridViewTextBoxColumn.DataPropertyName = "TenSV";
-            this.tenSVDataGridViewTextBoxColumn.HeaderText = "Họ và tên";
-            this.tenSVDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tenSVDataGridViewTextBoxColumn.Name = "tenSVDataGridViewTextBoxColumn";
-            this.tenSVDataGridViewTextBoxColumn.Width = 170;
-            // 
-            // matKhauDataGridViewTextBoxColumn
-            // 
-            this.matKhauDataGridViewTextBoxColumn.DataPropertyName = "MatKhau";
-            this.matKhauDataGridViewTextBoxColumn.HeaderText = "MatKhau";
-            this.matKhauDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.matKhauDataGridViewTextBoxColumn.Name = "matKhauDataGridViewTextBoxColumn";
-            this.matKhauDataGridViewTextBoxColumn.Visible = false;
-            this.matKhauDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // maNhomMonHocDataGridViewTextBoxColumn
-            // 
-            this.maNhomMonHocDataGridViewTextBoxColumn.DataPropertyName = "MaNhomMonHoc";
-            this.maNhomMonHocDataGridViewTextBoxColumn.HeaderText = "Mã chuyên ngành";
-            this.maNhomMonHocDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maNhomMonHocDataGridViewTextBoxColumn.Name = "maNhomMonHocDataGridViewTextBoxColumn";
-            this.maNhomMonHocDataGridViewTextBoxColumn.Width = 125;
+            this.grdDSSV.DataSource = this.tblSVBindingSource1;
+            this.grdDSSV.Location = new System.Drawing.Point(493, 136);
+            this.grdDSSV.Name = "grdDSSV";
+            this.grdDSSV.RowHeadersWidth = 51;
+            this.grdDSSV.RowTemplate.Height = 24;
+            this.grdDSSV.Size = new System.Drawing.Size(608, 371);
+            this.grdDSSV.TabIndex = 3;
             // 
             // tblSVBindingSource1
             // 
@@ -377,6 +341,39 @@ namespace BTL
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin lớp";
             // 
+            // maSVDataGridViewTextBoxColumn
+            // 
+            this.maSVDataGridViewTextBoxColumn.DataPropertyName = "MaSV";
+            this.maSVDataGridViewTextBoxColumn.HeaderText = "Mã sinh viên";
+            this.maSVDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maSVDataGridViewTextBoxColumn.Name = "maSVDataGridViewTextBoxColumn";
+            this.maSVDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // tenSVDataGridViewTextBoxColumn
+            // 
+            this.tenSVDataGridViewTextBoxColumn.DataPropertyName = "TenSV";
+            this.tenSVDataGridViewTextBoxColumn.HeaderText = "Họ và tên";
+            this.tenSVDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenSVDataGridViewTextBoxColumn.Name = "tenSVDataGridViewTextBoxColumn";
+            this.tenSVDataGridViewTextBoxColumn.Width = 170;
+            // 
+            // matKhauDataGridViewTextBoxColumn
+            // 
+            this.matKhauDataGridViewTextBoxColumn.DataPropertyName = "MatKhau";
+            this.matKhauDataGridViewTextBoxColumn.HeaderText = "MatKhau";
+            this.matKhauDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.matKhauDataGridViewTextBoxColumn.Name = "matKhauDataGridViewTextBoxColumn";
+            this.matKhauDataGridViewTextBoxColumn.Visible = false;
+            this.matKhauDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // maNhomMonHocDataGridViewTextBoxColumn
+            // 
+            this.maNhomMonHocDataGridViewTextBoxColumn.DataPropertyName = "MaNhomMonHoc";
+            this.maNhomMonHocDataGridViewTextBoxColumn.HeaderText = "Mã chuyên ngành";
+            this.maNhomMonHocDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maNhomMonHocDataGridViewTextBoxColumn.Name = "maNhomMonHocDataGridViewTextBoxColumn";
+            this.maNhomMonHocDataGridViewTextBoxColumn.Width = 125;
+            // 
             // frmThongTinLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -386,14 +383,14 @@ namespace BTL
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grdDSSV);
             this.Controls.Add(this.panel1);
             this.Name = "frmThongTinLopHoc";
             this.Text = "frmThongTinLopHoc";
             this.Load += new System.EventHandler(this.frmThongTinLopHoc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDSSV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblSVBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet5BindingSource)).EndInit();
@@ -417,14 +414,6 @@ namespace BTL
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtMaLHP;
-        private System.Windows.Forms.TextBox txtMaMon;
-        private System.Windows.Forms.TextBox txtTenHP;
-        private System.Windows.Forms.TextBox txtSiSo;
-        private System.Windows.Forms.TextBox txtGiangVien;
-        private System.Windows.Forms.TextBox txtPhongHoc;
-        private System.Windows.Forms.TextBox txtTietHoc;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource dKTCDataSet5BindingSource;
@@ -434,11 +423,18 @@ namespace BTL
         private System.Windows.Forms.BindingSource tblSVBindingSource;
         private DKTCDataSet5TableAdapters.tblSVTableAdapter tblSVTableAdapter;
         private System.Windows.Forms.BindingSource tblSVBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stt;
+        private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.TextBox txtMaLHP;
+        public System.Windows.Forms.TextBox txtMaMon;
+        public System.Windows.Forms.TextBox txtTenHP;
+        public System.Windows.Forms.TextBox txtSiSo;
+        public System.Windows.Forms.TextBox txtGiangVien;
+        public System.Windows.Forms.TextBox txtPhongHoc;
+        public System.Windows.Forms.TextBox txtTietHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn maSVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenSVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn matKhauDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maNhomMonHocDataGridViewTextBoxColumn;
-        private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.DataGridView grdDSSV;
     }
 }
