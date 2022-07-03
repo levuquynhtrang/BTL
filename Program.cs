@@ -17,7 +17,7 @@ namespace BTL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThongTinLopHoc());
+            Application.Run(new Login());
         }
     }
 }

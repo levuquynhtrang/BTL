@@ -100,7 +100,7 @@ namespace BTL
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.label1.Location = new System.Drawing.Point(12, 59);
+            this.label1.Location = new System.Drawing.Point(12, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 20);
             this.label1.TabIndex = 1;
@@ -111,7 +111,7 @@ namespace BTL
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.label2.Location = new System.Drawing.Point(12, 97);
+            this.label2.Location = new System.Drawing.Point(12, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 20);
             this.label2.TabIndex = 1;
@@ -122,7 +122,7 @@ namespace BTL
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.label3.Location = new System.Drawing.Point(12, 135);
+            this.label3.Location = new System.Drawing.Point(12, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 20);
             this.label3.TabIndex = 1;
@@ -133,7 +133,7 @@ namespace BTL
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.label4.Location = new System.Drawing.Point(12, 173);
+            this.label4.Location = new System.Drawing.Point(12, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 1;
@@ -144,7 +144,7 @@ namespace BTL
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.label5.Location = new System.Drawing.Point(12, 211);
+            this.label5.Location = new System.Drawing.Point(12, 224);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 20);
             this.label5.TabIndex = 1;
@@ -155,7 +155,7 @@ namespace BTL
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.label6.Location = new System.Drawing.Point(12, 249);
+            this.label6.Location = new System.Drawing.Point(12, 262);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 20);
             this.label6.TabIndex = 1;
@@ -167,7 +167,7 @@ namespace BTL
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.label7.Location = new System.Drawing.Point(12, 287);
+            this.label7.Location = new System.Drawing.Point(12, 300);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 20);
             this.label7.TabIndex = 1;
@@ -177,7 +177,7 @@ namespace BTL
             // txtMaLHP
             // 
             this.txtMaLHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.txtMaLHP.Location = new System.Drawing.Point(122, 52);
+            this.txtMaLHP.Location = new System.Drawing.Point(122, 65);
             this.txtMaLHP.Multiline = true;
             this.txtMaLHP.Name = "txtMaLHP";
             this.txtMaLHP.Size = new System.Drawing.Size(88, 29);
@@ -186,7 +186,7 @@ namespace BTL
             // txtMaMon
             // 
             this.txtMaMon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.txtMaMon.Location = new System.Drawing.Point(122, 90);
+            this.txtMaMon.Location = new System.Drawing.Point(122, 103);
             this.txtMaMon.Multiline = true;
             this.txtMaMon.Name = "txtMaMon";
             this.txtMaMon.Size = new System.Drawing.Size(130, 29);
@@ -195,7 +195,7 @@ namespace BTL
             // txtTenHP
             // 
             this.txtTenHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.txtTenHP.Location = new System.Drawing.Point(122, 128);
+            this.txtTenHP.Location = new System.Drawing.Point(122, 141);
             this.txtTenHP.Multiline = true;
             this.txtTenHP.Name = "txtTenHP";
             this.txtTenHP.Size = new System.Drawing.Size(265, 29);
@@ -204,7 +204,7 @@ namespace BTL
             // txtSiSo
             // 
             this.txtSiSo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.txtSiSo.Location = new System.Drawing.Point(122, 166);
+            this.txtSiSo.Location = new System.Drawing.Point(122, 179);
             this.txtSiSo.Multiline = true;
             this.txtSiSo.Name = "txtSiSo";
             this.txtSiSo.Size = new System.Drawing.Size(123, 29);
@@ -213,7 +213,7 @@ namespace BTL
             // txtGiangVien
             // 
             this.txtGiangVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.txtGiangVien.Location = new System.Drawing.Point(122, 209);
+            this.txtGiangVien.Location = new System.Drawing.Point(122, 222);
             this.txtGiangVien.Multiline = true;
             this.txtGiangVien.Name = "txtGiangVien";
             this.txtGiangVien.Size = new System.Drawing.Size(180, 29);
@@ -222,7 +222,7 @@ namespace BTL
             // txtPhongHoc
             // 
             this.txtPhongHoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.txtPhongHoc.Location = new System.Drawing.Point(122, 244);
+            this.txtPhongHoc.Location = new System.Drawing.Point(122, 257);
             this.txtPhongHoc.Multiline = true;
             this.txtPhongHoc.Name = "txtPhongHoc";
             this.txtPhongHoc.Size = new System.Drawing.Size(150, 29);
@@ -231,7 +231,7 @@ namespace BTL
             // txtTietHoc
             // 
             this.txtTietHoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.txtTietHoc.Location = new System.Drawing.Point(122, 284);
+            this.txtTietHoc.Location = new System.Drawing.Point(122, 297);
             this.txtTietHoc.Multiline = true;
             this.txtTietHoc.Name = "txtTietHoc";
             this.txtTietHoc.Size = new System.Drawing.Size(131, 29);
@@ -370,7 +370,7 @@ namespace BTL
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.groupBox1.Location = new System.Drawing.Point(17, 122);
+            this.groupBox1.Location = new System.Drawing.Point(27, 89);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(409, 385);
             this.groupBox1.TabIndex = 6;
