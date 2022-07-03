@@ -19,7 +19,7 @@ namespace BTL
         DataTable dt = new DataTable();
         string sql, constr;
         int i;
-        
+       
         public Login()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace BTL
         {
             constr = "Data Source=LAPTOP-JUURU7V4\\SQLEXPRESS;Initial Catalog=DKTC;Integrated Security=True";
             conn.ConnectionString = constr;
-            conn.Open();
+            //conn.Open();
         }
 
         private void txtDN_Enter(object sender, EventArgs e)
@@ -69,7 +69,7 @@ namespace BTL
         {
             //try
             //{
-                
+            conn.Open();
                 sql = "select * from tblSV where MaSV = '"+txtDN.Text+"' and MatKhau= '"+txtMK.Text+"'";
                 cmd = new SqlCommand(sql, conn);
                 SqlDataReader dta = cmd.ExecuteReader();
@@ -84,8 +84,9 @@ namespace BTL
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     
+                    MessageBox.Show("Đăng nhập thất bại","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                conn.Close();
                 }
             /*}
             catch
@@ -108,9 +109,25 @@ namespace BTL
 
         private void btnQL_Click(object sender, EventArgs e)
         {
-            frmQL f = new frmQL();
-            f.Show();
-            this.Visible = false;
+            conn.Open();
+            sql = "select * from tblQL where MaQL = '" + txtDN.Text + "' and MatKhauQL= '" + txtMK.Text + "'";
+            cmd = new SqlCommand(sql, conn);
+            SqlDataReader dta1 = cmd.ExecuteReader();
+            if (dta1.Read() == true)
+            {
+                //this.Close();
+                frmQL f = new frmQL();               
+                f.MaQL = txtDN.Text;
+                f.Show();
+                this.Hide();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conn.Close();
+            }
         }
 
         private void txtDN_TextChanged(object sender, EventArgs e)

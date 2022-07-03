@@ -11,7 +11,7 @@ namespace BTL
     {
         public static void DoSQL(string sql)
         {
-            string strcn = "Data Source=LVQT\\MSSQLSEVER01;Initial Catalog=DKTC;Integrated Security=True"; 
+            string strcn = "Data Source=LAPTOP-JUURU7V4\\SQLEXPRESS;Initial Catalog=DKTC;Integrated Security=True"; 
             SqlConnection conn = new SqlConnection(strcn);
             conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);

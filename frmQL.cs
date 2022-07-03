@@ -23,6 +23,7 @@ namespace BTL
         frmAdd ADD;
         frmThongTinLopHoc TTLH;
         int index;
+        public string MaQL;
         public frmQL(frmAdd add)
         {
             this.ADD = add;
@@ -122,6 +123,11 @@ namespace BTL
             da.Fill(dt);
             grdQL.DataSource = dt;
             //conn.Open();
+            txtInfo.Text = MaQL;
+            sql = "select TenQL from tblQL where MaQL = '" + txtInfo.Text + "'";
+            da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt1);
+            txtHoTen.Text = dt1.Rows[0]["TenQL"].ToString();
         }
 
         private void btnFix_Click(object sender, EventArgs e)
@@ -201,6 +207,17 @@ namespace BTL
             bc.SetDataSource(dtBC);
             frmRptQL f = new frmRptQL(bc);
             f.Show();
+        }
+
+        private void txtInfo_TextChanged(object sender, EventArgs e)
+        {
+            /*Login f = new Login();
+            f.txtDN.Text = txtInfo.Text;*/
+        }
+
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void comTCHP_SelectedIndexChanged(object sender, EventArgs e)

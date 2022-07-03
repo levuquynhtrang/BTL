@@ -249,6 +249,11 @@ namespace BTL
             f.Show();
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnHDDK_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://drive.google.com/file/d/12JMQuaUM5f-qtzbkeuIcPQQ4qk41XCnY/view");

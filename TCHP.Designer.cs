@@ -37,15 +37,11 @@ namespace BTL
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTrangChuTCHP = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnLogoutTCHP = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnTCHP = new System.Windows.Forms.Button();
-            this.btnLSDKHP_TCHP = new System.Windows.Forms.Button();
-            this.btnDKHP_TCHP = new System.Windows.Forms.Button();
-            this.btnHDDK = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comTCHP = new System.Windows.Forms.ComboBox();
@@ -65,7 +61,6 @@ namespace BTL
             this.tietHocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sSHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTCHP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet5BindingSource)).BeginInit();
@@ -76,12 +71,12 @@ namespace BTL
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.panel1.Controls.Add(this.btnTrangChuTCHP);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.btnLogoutTCHP);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1307, 100);
+            this.panel1.Size = new System.Drawing.Size(963, 81);
             this.panel1.TabIndex = 0;
             // 
             // btnTrangChuTCHP
@@ -91,25 +86,13 @@ namespace BTL
             this.btnTrangChuTCHP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTrangChuTCHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTrangChuTCHP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTrangChuTCHP.Location = new System.Drawing.Point(31, 47);
+            this.btnTrangChuTCHP.Location = new System.Drawing.Point(23, 38);
+            this.btnTrangChuTCHP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTrangChuTCHP.Name = "btnTrangChuTCHP";
-            this.btnTrangChuTCHP.Size = new System.Drawing.Size(169, 47);
+            this.btnTrangChuTCHP.Size = new System.Drawing.Size(127, 38);
             this.btnTrangChuTCHP.TabIndex = 0;
             this.btnTrangChuTCHP.Text = "Trang chủ";
             this.btnTrangChuTCHP.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(683, 57);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(344, 35);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "11208055 | Lê Vũ Quỳnh Trang";
             // 
             // btnLogoutTCHP
             // 
@@ -118,83 +101,25 @@ namespace BTL
             this.btnLogoutTCHP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogoutTCHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLogoutTCHP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogoutTCHP.Location = new System.Drawing.Point(1116, 47);
+            this.btnLogoutTCHP.Location = new System.Drawing.Point(837, 38);
+            this.btnLogoutTCHP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogoutTCHP.Name = "btnLogoutTCHP";
-            this.btnLogoutTCHP.Size = new System.Drawing.Size(169, 47);
+            this.btnLogoutTCHP.Size = new System.Drawing.Size(127, 38);
             this.btnLogoutTCHP.TabIndex = 0;
             this.btnLogoutTCHP.Text = "Đăng xuất";
             this.btnLogoutTCHP.UseVisualStyleBackColor = false;
             this.btnLogoutTCHP.Click += new System.EventHandler(this.btnLogoutTCHP_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(218)))), ((int)(((byte)(231)))));
-            this.panel2.Controls.Add(this.btnTCHP);
-            this.panel2.Controls.Add(this.btnLSDKHP_TCHP);
-            this.panel2.Controls.Add(this.btnDKHP_TCHP);
-            this.panel2.Controls.Add(this.btnHDDK);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(290, 504);
-            this.panel2.TabIndex = 1;
-            // 
-            // btnTCHP
-            // 
-            this.btnTCHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTCHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.btnTCHP.Location = new System.Drawing.Point(22, 308);
-            this.btnTCHP.Name = "btnTCHP";
-            this.btnTCHP.Size = new System.Drawing.Size(247, 64);
-            this.btnTCHP.TabIndex = 0;
-            this.btnTCHP.Text = "Tra cứu học phần";
-            this.btnTCHP.UseVisualStyleBackColor = true;
-            // 
-            // btnLSDKHP_TCHP
-            // 
-            this.btnLSDKHP_TCHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLSDKHP_TCHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.btnLSDKHP_TCHP.Location = new System.Drawing.Point(22, 233);
-            this.btnLSDKHP_TCHP.Name = "btnLSDKHP_TCHP";
-            this.btnLSDKHP_TCHP.Size = new System.Drawing.Size(247, 64);
-            this.btnLSDKHP_TCHP.TabIndex = 0;
-            this.btnLSDKHP_TCHP.Text = "Lịch sử đăng ký học phần";
-            this.btnLSDKHP_TCHP.UseVisualStyleBackColor = true;
-            this.btnLSDKHP_TCHP.Click += new System.EventHandler(this.btnLSDKHP_TCHP_Click);
-            // 
-            // btnDKHP_TCHP
-            // 
-            this.btnDKHP_TCHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDKHP_TCHP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.btnDKHP_TCHP.Location = new System.Drawing.Point(22, 158);
-            this.btnDKHP_TCHP.Name = "btnDKHP_TCHP";
-            this.btnDKHP_TCHP.Size = new System.Drawing.Size(247, 64);
-            this.btnDKHP_TCHP.TabIndex = 0;
-            this.btnDKHP_TCHP.Text = "Đăng ký học phần";
-            this.btnDKHP_TCHP.UseVisualStyleBackColor = true;
-            this.btnDKHP_TCHP.Click += new System.EventHandler(this.btnDKHP_TCHP_Click);
-            // 
-            // btnHDDK
-            // 
-            this.btnHDDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnHDDK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.btnHDDK.Location = new System.Drawing.Point(22, 83);
-            this.btnHDDK.Name = "btnHDDK";
-            this.btnHDDK.Size = new System.Drawing.Size(247, 64);
-            this.btnHDDK.TabIndex = 0;
-            this.btnHDDK.Text = "Hướng dẫn đăng ký";
-            this.btnHDDK.UseVisualStyleBackColor = true;
-            this.btnHDDK.Click += new System.EventHandler(this.btnHDDK_Click);
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Location = new System.Drawing.Point(320, 128);
+            this.textBox2.Location = new System.Drawing.Point(38, 104);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(907, 46);
+            this.textBox2.Size = new System.Drawing.Size(886, 38);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Tra cứu học phần";
             // 
@@ -203,9 +128,10 @@ namespace BTL
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.label1.Location = new System.Drawing.Point(329, 199);
+            this.label1.Location = new System.Drawing.Point(45, 162);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 25);
+            this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tìm theo:";
             // 
@@ -213,22 +139,24 @@ namespace BTL
             // 
             this.comTCHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.comTCHP.FormattingEnabled = true;
-            this.comTCHP.ItemHeight = 20;
+            this.comTCHP.ItemHeight = 16;
             this.comTCHP.Items.AddRange(new object[] {
             "Mã HP",
             "Tên HP",
             "Mã môn"});
-            this.comTCHP.Location = new System.Drawing.Point(438, 197);
+            this.comTCHP.Location = new System.Drawing.Point(126, 160);
+            this.comTCHP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comTCHP.Name = "comTCHP";
-            this.comTCHP.Size = new System.Drawing.Size(104, 28);
+            this.comTCHP.Size = new System.Drawing.Size(79, 24);
             this.comTCHP.TabIndex = 4;
             // 
             // txtNhap
             // 
-            this.txtNhap.Location = new System.Drawing.Point(585, 197);
+            this.txtNhap.Location = new System.Drawing.Point(237, 160);
+            this.txtNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNhap.Multiline = true;
             this.txtNhap.Name = "txtNhap";
-            this.txtNhap.Size = new System.Drawing.Size(196, 28);
+            this.txtNhap.Size = new System.Drawing.Size(148, 24);
             this.txtNhap.TabIndex = 5;
             this.txtNhap.Click += new System.EventHandler(this.txtNhap_Click);
             this.txtNhap.TextChanged += new System.EventHandler(this.txtNhap_TextChanged);
@@ -241,9 +169,10 @@ namespace BTL
             this.btnTk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTk.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTk.Location = new System.Drawing.Point(827, 191);
+            this.btnTk.Location = new System.Drawing.Point(419, 156);
+            this.btnTk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTk.Name = "btnTk";
-            this.btnTk.Size = new System.Drawing.Size(120, 40);
+            this.btnTk.Size = new System.Drawing.Size(90, 32);
             this.btnTk.TabIndex = 6;
             this.btnTk.Text = "Tìm kiếm";
             this.btnTk.UseVisualStyleBackColor = false;
@@ -251,8 +180,18 @@ namespace BTL
             // 
             // grdTCHP
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdTCHP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdTCHP.AutoGenerateColumns = false;
             this.grdTCHP.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdTCHP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdTCHP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdTCHP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maLopHPDataGridViewTextBoxColumn,
@@ -264,11 +203,12 @@ namespace BTL
             this.tietHocDataGridViewTextBoxColumn,
             this.sSHienTaiDataGridViewTextBoxColumn});
             this.grdTCHP.DataSource = this.tblLopHPBindingSource;
-            this.grdTCHP.Location = new System.Drawing.Point(334, 245);
+            this.grdTCHP.Location = new System.Drawing.Point(38, 199);
+            this.grdTCHP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grdTCHP.Name = "grdTCHP";
             this.grdTCHP.RowHeadersWidth = 51;
             this.grdTCHP.RowTemplate.Height = 24;
-            this.grdTCHP.Size = new System.Drawing.Size(939, 323);
+            this.grdTCHP.Size = new System.Drawing.Size(886, 262);
             this.grdTCHP.TabIndex = 7;
             // 
             // tblLopHPBindingSource
@@ -293,38 +233,37 @@ namespace BTL
             // maLopHPDataGridViewTextBoxColumn
             // 
             this.maLopHPDataGridViewTextBoxColumn.DataPropertyName = "MaLopHP";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.maLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.maLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.maLopHPDataGridViewTextBoxColumn.HeaderText = "Mã LHP";
             this.maLopHPDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maLopHPDataGridViewTextBoxColumn.Name = "maLopHPDataGridViewTextBoxColumn";
-            this.maLopHPDataGridViewTextBoxColumn.Width = 80;
             // 
             // maMonDataGridViewTextBoxColumn
             // 
             this.maMonDataGridViewTextBoxColumn.DataPropertyName = "MaMon";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.maMonDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.maMonDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.maMonDataGridViewTextBoxColumn.HeaderText = "Mã môn";
             this.maMonDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maMonDataGridViewTextBoxColumn.Name = "maMonDataGridViewTextBoxColumn";
-            this.maMonDataGridViewTextBoxColumn.Width = 80;
+            this.maMonDataGridViewTextBoxColumn.Width = 90;
             // 
             // tenLopHPDataGridViewTextBoxColumn
             // 
             this.tenLopHPDataGridViewTextBoxColumn.DataPropertyName = "TenLopHP";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tenLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tenLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.tenLopHPDataGridViewTextBoxColumn.HeaderText = "Tên LHP";
             this.tenLopHPDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenLopHPDataGridViewTextBoxColumn.Name = "tenLopHPDataGridViewTextBoxColumn";
-            this.tenLopHPDataGridViewTextBoxColumn.Width = 140;
+            this.tenLopHPDataGridViewTextBoxColumn.Width = 240;
             // 
             // siSoDataGridViewTextBoxColumn
             // 
             this.siSoDataGridViewTextBoxColumn.DataPropertyName = "SiSo";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.siSoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.siSoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.siSoDataGridViewTextBoxColumn.HeaderText = "Sĩ số";
             this.siSoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.siSoDataGridViewTextBoxColumn.Name = "siSoDataGridViewTextBoxColumn";
@@ -341,8 +280,8 @@ namespace BTL
             // phongHocDataGridViewTextBoxColumn
             // 
             this.phongHocDataGridViewTextBoxColumn.DataPropertyName = "PhongHoc";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.phongHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.phongHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.phongHocDataGridViewTextBoxColumn.HeaderText = "Phòng học";
             this.phongHocDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.phongHocDataGridViewTextBoxColumn.Name = "phongHocDataGridViewTextBoxColumn";
@@ -351,43 +290,40 @@ namespace BTL
             // tietHocDataGridViewTextBoxColumn
             // 
             this.tietHocDataGridViewTextBoxColumn.DataPropertyName = "TietHoc";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tietHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tietHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.tietHocDataGridViewTextBoxColumn.HeaderText = "Tiết học";
             this.tietHocDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tietHocDataGridViewTextBoxColumn.Name = "tietHocDataGridViewTextBoxColumn";
-            this.tietHocDataGridViewTextBoxColumn.Width = 60;
             // 
             // sSHienTaiDataGridViewTextBoxColumn
             // 
             this.sSHienTaiDataGridViewTextBoxColumn.DataPropertyName = "SSHienTai";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.sSHienTaiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.sSHienTaiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.sSHienTaiDataGridViewTextBoxColumn.HeaderText = "Sĩ số hiện tại";
             this.sSHienTaiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.sSHienTaiDataGridViewTextBoxColumn.Name = "sSHienTaiDataGridViewTextBoxColumn";
-            this.sSHienTaiDataGridViewTextBoxColumn.Width = 40;
+            this.sSHienTaiDataGridViewTextBoxColumn.Width = 70;
             // 
             // TCHP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(218)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(1307, 604);
+            this.ClientSize = new System.Drawing.Size(963, 491);
             this.Controls.Add(this.grdTCHP);
             this.Controls.Add(this.btnTk);
             this.Controls.Add(this.txtNhap);
             this.Controls.Add(this.comTCHP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TCHP";
             this.Text = "TCHP";
             this.Load += new System.EventHandler(this.TCHP_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdTCHP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLopHPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dKTCDataSet5BindingSource)).EndInit();
@@ -400,14 +336,8 @@ namespace BTL
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnTrangChuTCHP;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnLogoutTCHP;
-        private System.Windows.Forms.Button btnHDDK;
-        private System.Windows.Forms.Button btnLSDKHP_TCHP;
-        private System.Windows.Forms.Button btnDKHP_TCHP;
-        private System.Windows.Forms.Button btnTCHP;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comTCHP;
