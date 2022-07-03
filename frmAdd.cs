@@ -25,7 +25,7 @@ namespace BTL
 
         private void frmAdd_Load(object sender, EventArgs e)
         {
-            constr = "Data Source=LVQT\\MSSQLSEVER01;Initial Catalog=DKTC;Integrated Security=True";
+            constr = "Data Source=LAPTOP-JUURU7V4\\SQLEXPRESS;Initial Catalog=DKTC;Integrated Security=True";
             conn.ConnectionString = constr;
             conn.Open();
             sql = "Select * From tblLopHP";

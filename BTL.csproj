@@ -32,8 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,6 +83,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DKTCDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DKTCDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DKTCDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,24 @@
     </Compile>
     <Compile Include="frmQL.Designer.cs">
       <DependentUpon>frmQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptKQDk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptKQDk.Designer.cs">
+      <DependentUpon>frmRptKQDk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptQL.Designer.cs">
+      <DependentUpon>frmRptQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptThongTinSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptThongTinSV.Designer.cs">
+      <DependentUpon>frmRptThongTinSV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSV.cs">
       <SubType>Form</SubType>
@@ -114,6 +144,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptKQDK.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptKQDK.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptQL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptQL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptThongTinSV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptThongTinSV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TCHP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +176,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQL.resx">
       <DependentUpon>frmQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptKQDk.resx">
+      <DependentUpon>frmRptKQDk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptQL.resx">
+      <DependentUpon>frmRptQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptThongTinSV.resx">
+      <DependentUpon>frmRptThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSV.resx">
       <DependentUpon>frmSV.cs</DependentUpon>
@@ -148,6 +205,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptKQDK.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptKQDK.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptQL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptQL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptThongTinSV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptThongTinSV.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="TCHP.resx">
       <DependentUpon>TCHP.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +286,17 @@
     <None Include="DKTCDataSet5.xss">
       <DependentUpon>DKTCDataSet5.xsd</DependentUpon>
     </None>
+    <None Include="DKTCDataSet6.xsc">
+      <DependentUpon>DKTCDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DKTCDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DKTCDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DKTCDataSet6.xss">
+      <DependentUpon>DKTCDataSet6.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -283,6 +363,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eyes %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

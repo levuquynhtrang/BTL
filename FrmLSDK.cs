@@ -85,7 +85,7 @@ namespace BTL
         {
             // TODO: This line of code loads data into the 'dKTCDataSet5.tblLSDK' table. You can move, or remove it, as needed.
             //this.tblLSDKTableAdapter.Fill(this.dKTCDataSet5.tblLSDK);
-            constr = "Data Source=LVQT\\MSSQLSEVER01;Initial Catalog=DKTC;Integrated Security=True";
+            constr = "Data Source=LAPTOP-JUURU7V4\\SQLEXPRESS;Initial Catalog=DKTC;Integrated Security=True";
             conn.ConnectionString = constr;
             sql = "select MaMon, MaLopHP, TenMon, SoTC, HocKi, NamHoc, TietHoc, PhongHoc, GiangVien from tblLSDK where MaSV='" + MaSV + "'";
             da = new SqlDataAdapter(sql, conn);

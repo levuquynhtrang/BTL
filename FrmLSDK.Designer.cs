@@ -30,16 +30,16 @@ namespace BTL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogoutLSDK = new System.Windows.Forms.Button();
@@ -89,8 +89,9 @@ namespace BTL
             this.panel1.Controls.Add(this.btnTrangChuLSDK);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1201, 94);
+            this.panel1.Size = new System.Drawing.Size(1351, 118);
             this.panel1.TabIndex = 5;
             // 
             // panel2
@@ -98,10 +99,10 @@ namespace BTL
             this.panel2.Controls.Add(this.btnLogoutLSDK);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(581, 0);
+            this.panel2.Location = new System.Drawing.Point(653, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(620, 94);
+            this.panel2.Size = new System.Drawing.Size(698, 118);
             this.panel2.TabIndex = 1;
             // 
             // btnLogoutLSDK
@@ -112,9 +113,10 @@ namespace BTL
             this.btnLogoutLSDK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogoutLSDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLogoutLSDK.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogoutLSDK.Location = new System.Drawing.Point(428, 49);
+            this.btnLogoutLSDK.Location = new System.Drawing.Point(482, 61);
+            this.btnLogoutLSDK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogoutLSDK.Name = "btnLogoutLSDK";
-            this.btnLogoutLSDK.Size = new System.Drawing.Size(181, 40);
+            this.btnLogoutLSDK.Size = new System.Drawing.Size(204, 50);
             this.btnLogoutLSDK.TabIndex = 0;
             this.btnLogoutLSDK.Text = "Đăng xuất";
             this.btnLogoutLSDK.UseVisualStyleBackColor = false;
@@ -127,9 +129,10 @@ namespace BTL
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(3, 50);
+            this.button7.Location = new System.Drawing.Point(3, 65);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(365, 39);
+            this.button7.Size = new System.Drawing.Size(411, 49);
             this.button7.TabIndex = 1;
             this.button7.Text = "11208055 | Lê Vũ Quỳnh Trang";
             this.button7.UseVisualStyleBackColor = false;
@@ -141,9 +144,10 @@ namespace BTL
             this.btnTrangChuLSDK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTrangChuLSDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTrangChuLSDK.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTrangChuLSDK.Location = new System.Drawing.Point(29, 49);
+            this.btnTrangChuLSDK.Location = new System.Drawing.Point(33, 61);
+            this.btnTrangChuLSDK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTrangChuLSDK.Name = "btnTrangChuLSDK";
-            this.btnTrangChuLSDK.Size = new System.Drawing.Size(201, 40);
+            this.btnTrangChuLSDK.Size = new System.Drawing.Size(226, 50);
             this.btnTrangChuLSDK.TabIndex = 0;
             this.btnTrangChuLSDK.Text = "Trang chủ";
             this.btnTrangChuLSDK.UseVisualStyleBackColor = false;
@@ -158,19 +162,20 @@ namespace BTL
             this.panel3.Controls.Add(this.btnTCHP_LSDK);
             this.panel3.Controls.Add(this.btnLSDKHP);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 94);
+            this.panel3.Location = new System.Drawing.Point(0, 118);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(274, 513);
+            this.panel3.Size = new System.Drawing.Size(308, 641);
             this.panel3.TabIndex = 12;
             // 
             // btnHDDK
             // 
             this.btnHDDK.BackColor = System.Drawing.Color.White;
             this.btnHDDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnHDDK.Location = new System.Drawing.Point(12, 16);
+            this.btnHDDK.Location = new System.Drawing.Point(14, 20);
+            this.btnHDDK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHDDK.Name = "btnHDDK";
-            this.btnHDDK.Size = new System.Drawing.Size(240, 60);
+            this.btnHDDK.Size = new System.Drawing.Size(270, 75);
             this.btnHDDK.TabIndex = 2;
             this.btnHDDK.Text = "Hướng dẫn đăng ký ";
             this.btnHDDK.UseVisualStyleBackColor = false;
@@ -179,9 +184,10 @@ namespace BTL
             // 
             this.btnDKHP_LSDK.BackColor = System.Drawing.Color.White;
             this.btnDKHP_LSDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDKHP_LSDK.Location = new System.Drawing.Point(12, 92);
+            this.btnDKHP_LSDK.Location = new System.Drawing.Point(14, 115);
+            this.btnDKHP_LSDK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDKHP_LSDK.Name = "btnDKHP_LSDK";
-            this.btnDKHP_LSDK.Size = new System.Drawing.Size(240, 60);
+            this.btnDKHP_LSDK.Size = new System.Drawing.Size(270, 75);
             this.btnDKHP_LSDK.TabIndex = 3;
             this.btnDKHP_LSDK.Text = "Đăng ký học phần ";
             this.btnDKHP_LSDK.UseVisualStyleBackColor = false;
@@ -191,9 +197,10 @@ namespace BTL
             // 
             this.btnHPTD.BackColor = System.Drawing.Color.White;
             this.btnHPTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnHPTD.Location = new System.Drawing.Point(12, 320);
+            this.btnHPTD.Location = new System.Drawing.Point(14, 400);
+            this.btnHPTD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHPTD.Name = "btnHPTD";
-            this.btnHPTD.Size = new System.Drawing.Size(240, 60);
+            this.btnHPTD.Size = new System.Drawing.Size(270, 75);
             this.btnHPTD.TabIndex = 4;
             this.btnHPTD.Text = "Học phần tương đương";
             this.btnHPTD.UseVisualStyleBackColor = false;
@@ -202,9 +209,10 @@ namespace BTL
             // 
             this.btnTCHP_LSDK.BackColor = System.Drawing.Color.White;
             this.btnTCHP_LSDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTCHP_LSDK.Location = new System.Drawing.Point(12, 244);
+            this.btnTCHP_LSDK.Location = new System.Drawing.Point(14, 305);
+            this.btnTCHP_LSDK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTCHP_LSDK.Name = "btnTCHP_LSDK";
-            this.btnTCHP_LSDK.Size = new System.Drawing.Size(240, 60);
+            this.btnTCHP_LSDK.Size = new System.Drawing.Size(270, 75);
             this.btnTCHP_LSDK.TabIndex = 5;
             this.btnTCHP_LSDK.Text = "Tra cứu học phần";
             this.btnTCHP_LSDK.UseVisualStyleBackColor = false;
@@ -214,9 +222,10 @@ namespace BTL
             // 
             this.btnLSDKHP.BackColor = System.Drawing.Color.White;
             this.btnLSDKHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLSDKHP.Location = new System.Drawing.Point(12, 168);
+            this.btnLSDKHP.Location = new System.Drawing.Point(14, 210);
+            this.btnLSDKHP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLSDKHP.Name = "btnLSDKHP";
-            this.btnLSDKHP.Size = new System.Drawing.Size(240, 60);
+            this.btnLSDKHP.Size = new System.Drawing.Size(270, 75);
             this.btnLSDKHP.TabIndex = 6;
             this.btnLSDKHP.Text = "Lịch sử đăng ký học phần ";
             this.btnLSDKHP.UseVisualStyleBackColor = false;
@@ -227,11 +236,11 @@ namespace BTL
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(288, 110);
+            this.textBox1.Location = new System.Drawing.Point(324, 138);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(869, 44);
+            this.textBox1.Size = new System.Drawing.Size(978, 55);
             this.textBox1.TabIndex = 14;
             this.textBox1.Text = "Lịch sử đăng ký học phần";
             // 
@@ -252,19 +261,19 @@ namespace BTL
             this.phongHocDataGridViewTextBoxColumn,
             this.giangVienDataGridViewTextBoxColumn});
             this.grdLSDK.DataSource = this.tblLSDKBindingSource;
-            this.grdLSDK.Location = new System.Drawing.Point(288, 205);
+            this.grdLSDK.Location = new System.Drawing.Point(324, 256);
             this.grdLSDK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grdLSDK.Name = "grdLSDK";
             this.grdLSDK.RowHeadersWidth = 62;
             this.grdLSDK.RowTemplate.Height = 28;
-            this.grdLSDK.Size = new System.Drawing.Size(869, 326);
+            this.grdLSDK.Size = new System.Drawing.Size(978, 408);
             this.grdLSDK.TabIndex = 15;
             // 
             // maSVDataGridViewTextBoxColumn
             // 
             this.maSVDataGridViewTextBoxColumn.DataPropertyName = "MaSV";
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.maSVDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.maSVDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.maSVDataGridViewTextBoxColumn.HeaderText = "Mã SV";
             this.maSVDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maSVDataGridViewTextBoxColumn.Name = "maSVDataGridViewTextBoxColumn";
@@ -274,8 +283,8 @@ namespace BTL
             // maMonDataGridViewTextBoxColumn
             // 
             this.maMonDataGridViewTextBoxColumn.DataPropertyName = "MaMon";
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.maMonDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.maMonDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.maMonDataGridViewTextBoxColumn.HeaderText = "Mã môn";
             this.maMonDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maMonDataGridViewTextBoxColumn.Name = "maMonDataGridViewTextBoxColumn";
@@ -284,8 +293,8 @@ namespace BTL
             // maLopHPDataGridViewTextBoxColumn
             // 
             this.maLopHPDataGridViewTextBoxColumn.DataPropertyName = "MaLopHP";
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.maLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.maLopHPDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.maLopHPDataGridViewTextBoxColumn.HeaderText = "Mã LHP";
             this.maLopHPDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maLopHPDataGridViewTextBoxColumn.Name = "maLopHPDataGridViewTextBoxColumn";
@@ -294,8 +303,8 @@ namespace BTL
             // tenMonDataGridViewTextBoxColumn
             // 
             this.tenMonDataGridViewTextBoxColumn.DataPropertyName = "TenMon";
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tenMonDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tenMonDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.tenMonDataGridViewTextBoxColumn.HeaderText = "Tên môn";
             this.tenMonDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenMonDataGridViewTextBoxColumn.Name = "tenMonDataGridViewTextBoxColumn";
@@ -304,8 +313,8 @@ namespace BTL
             // soTCDataGridViewTextBoxColumn
             // 
             this.soTCDataGridViewTextBoxColumn.DataPropertyName = "SoTC";
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.soTCDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.soTCDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.soTCDataGridViewTextBoxColumn.HeaderText = "Số TC";
             this.soTCDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.soTCDataGridViewTextBoxColumn.Name = "soTCDataGridViewTextBoxColumn";
@@ -314,8 +323,8 @@ namespace BTL
             // hocKiDataGridViewTextBoxColumn
             // 
             this.hocKiDataGridViewTextBoxColumn.DataPropertyName = "HocKi";
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.hocKiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.hocKiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.hocKiDataGridViewTextBoxColumn.HeaderText = "Học kỳ";
             this.hocKiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hocKiDataGridViewTextBoxColumn.Name = "hocKiDataGridViewTextBoxColumn";
@@ -324,8 +333,8 @@ namespace BTL
             // namHocDataGridViewTextBoxColumn
             // 
             this.namHocDataGridViewTextBoxColumn.DataPropertyName = "NamHoc";
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.namHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.namHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.namHocDataGridViewTextBoxColumn.HeaderText = "Năm học";
             this.namHocDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.namHocDataGridViewTextBoxColumn.Name = "namHocDataGridViewTextBoxColumn";
@@ -334,8 +343,8 @@ namespace BTL
             // tietHocDataGridViewTextBoxColumn
             // 
             this.tietHocDataGridViewTextBoxColumn.DataPropertyName = "TietHoc";
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tietHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tietHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.tietHocDataGridViewTextBoxColumn.HeaderText = "Tiết học";
             this.tietHocDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tietHocDataGridViewTextBoxColumn.Name = "tietHocDataGridViewTextBoxColumn";
@@ -344,8 +353,8 @@ namespace BTL
             // phongHocDataGridViewTextBoxColumn
             // 
             this.phongHocDataGridViewTextBoxColumn.DataPropertyName = "PhongHoc";
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.phongHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.phongHocDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.phongHocDataGridViewTextBoxColumn.HeaderText = "Phòng học";
             this.phongHocDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.phongHocDataGridViewTextBoxColumn.Name = "phongHocDataGridViewTextBoxColumn";
@@ -354,8 +363,8 @@ namespace BTL
             // giangVienDataGridViewTextBoxColumn
             // 
             this.giangVienDataGridViewTextBoxColumn.DataPropertyName = "GiangVien";
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.giangVienDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.giangVienDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.giangVienDataGridViewTextBoxColumn.HeaderText = "Giảng viên";
             this.giangVienDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.giangVienDataGridViewTextBoxColumn.Name = "giangVienDataGridViewTextBoxColumn";
@@ -386,10 +395,10 @@ namespace BTL
             "2021-2022",
             "2022-2023",
             "2023-2024"});
-            this.comNamHoc.Location = new System.Drawing.Point(448, 163);
+            this.comNamHoc.Location = new System.Drawing.Point(504, 204);
             this.comNamHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comNamHoc.Name = "comNamHoc";
-            this.comNamHoc.Size = new System.Drawing.Size(180, 30);
+            this.comNamHoc.Size = new System.Drawing.Size(202, 34);
             this.comNamHoc.TabIndex = 16;
             this.comNamHoc.Text = "  Chọn --";
             // 
@@ -398,9 +407,9 @@ namespace BTL
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.label1.Location = new System.Drawing.Point(332, 166);
+            this.label1.Location = new System.Drawing.Point(374, 208);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 24);
+            this.label1.Size = new System.Drawing.Size(114, 26);
             this.label1.TabIndex = 17;
             this.label1.Text = "Năm học:";
             // 
@@ -409,9 +418,9 @@ namespace BTL
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.label2.Location = new System.Drawing.Point(642, 166);
+            this.label2.Location = new System.Drawing.Point(722, 208);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 24);
+            this.label2.Size = new System.Drawing.Size(92, 26);
             this.label2.TabIndex = 18;
             this.label2.Text = "Học kỳ:";
             // 
@@ -424,10 +433,10 @@ namespace BTL
             "Học kỳ 1",
             "Học kỳ 2",
             "Học kỳ 3"});
-            this.comHocKy.Location = new System.Drawing.Point(728, 163);
+            this.comHocKy.Location = new System.Drawing.Point(819, 204);
             this.comHocKy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comHocKy.Name = "comHocKy";
-            this.comHocKy.Size = new System.Drawing.Size(165, 30);
+            this.comHocKy.Size = new System.Drawing.Size(185, 34);
             this.comHocKy.TabIndex = 19;
             this.comHocKy.Text = "  Chọn --";
             this.comHocKy.SelectedIndexChanged += new System.EventHandler(this.comHocKy_SelectedIndexChanged);
@@ -443,10 +452,10 @@ namespace BTL
             // 
             // FrmLSDK
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(218)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(1201, 607);
+            this.ClientSize = new System.Drawing.Size(1351, 759);
             this.Controls.Add(this.comHocKy);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

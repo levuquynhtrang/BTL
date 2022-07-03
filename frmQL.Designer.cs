@@ -62,7 +62,7 @@ namespace BTL
             this.dKTCDataSet5 = new BTL.DKTCDataSet5();
             this.tblLopHPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dKTCDataSet1 = new BTL.DKTCDataSet1();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnXuatThongTin = new System.Windows.Forms.Button();
             this.btnThemmoi = new System.Windows.Forms.Button();
             this.tblLopHPTableAdapter = new BTL.DKTCDataSet1TableAdapters.tblLopHPTableAdapter();
             this.tblLopHPBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -93,8 +93,9 @@ namespace BTL
             this.panel1.Controls.Add(this.btnTrangChu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1201, 116);
+            this.panel1.Size = new System.Drawing.Size(1351, 145);
             this.panel1.TabIndex = 3;
             // 
             // panel2
@@ -102,10 +103,10 @@ namespace BTL
             this.panel2.Controls.Add(this.btnLogoutQL);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(543, 0);
+            this.panel2.Location = new System.Drawing.Point(611, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(658, 116);
+            this.panel2.Size = new System.Drawing.Size(740, 145);
             this.panel2.TabIndex = 1;
             // 
             // btnLogoutQL
@@ -116,9 +117,10 @@ namespace BTL
             this.btnLogoutQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogoutQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLogoutQL.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogoutQL.Location = new System.Drawing.Point(436, 76);
+            this.btnLogoutQL.Location = new System.Drawing.Point(490, 95);
+            this.btnLogoutQL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogoutQL.Name = "btnLogoutQL";
-            this.btnLogoutQL.Size = new System.Drawing.Size(181, 40);
+            this.btnLogoutQL.Size = new System.Drawing.Size(204, 50);
             this.btnLogoutQL.TabIndex = 0;
             this.btnLogoutQL.Text = "Đăng xuất";
             this.btnLogoutQL.UseVisualStyleBackColor = false;
@@ -131,9 +133,10 @@ namespace BTL
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(22, 77);
+            this.button7.Location = new System.Drawing.Point(25, 96);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(365, 39);
+            this.button7.Size = new System.Drawing.Size(411, 49);
             this.button7.TabIndex = 1;
             this.button7.Text = "11208055 | Lê Vũ Quỳnh Trang";
             this.button7.UseVisualStyleBackColor = false;
@@ -145,9 +148,10 @@ namespace BTL
             this.btnTrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTrangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTrangChu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTrangChu.Location = new System.Drawing.Point(22, 71);
+            this.btnTrangChu.Location = new System.Drawing.Point(25, 89);
+            this.btnTrangChu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTrangChu.Name = "btnTrangChu";
-            this.btnTrangChu.Size = new System.Drawing.Size(201, 40);
+            this.btnTrangChu.Size = new System.Drawing.Size(226, 50);
             this.btnTrangChu.TabIndex = 0;
             this.btnTrangChu.Text = "Trang chủ";
             this.btnTrangChu.UseVisualStyleBackColor = false;
@@ -159,9 +163,10 @@ namespace BTL
             this.btnTk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTk.ForeColor = System.Drawing.Color.White;
-            this.btnTk.Location = new System.Drawing.Point(650, 199);
+            this.btnTk.Location = new System.Drawing.Point(731, 249);
+            this.btnTk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTk.Name = "btnTk";
-            this.btnTk.Size = new System.Drawing.Size(115, 44);
+            this.btnTk.Size = new System.Drawing.Size(129, 55);
             this.btnTk.TabIndex = 25;
             this.btnTk.Text = "Tìm kiếm";
             this.btnTk.UseVisualStyleBackColor = false;
@@ -171,10 +176,11 @@ namespace BTL
             // 
             this.txtNhap_QL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhap_QL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.txtNhap_QL.Location = new System.Drawing.Point(442, 210);
+            this.txtNhap_QL.Location = new System.Drawing.Point(497, 262);
+            this.txtNhap_QL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNhap_QL.Multiline = true;
             this.txtNhap_QL.Name = "txtNhap_QL";
-            this.txtNhap_QL.Size = new System.Drawing.Size(192, 29);
+            this.txtNhap_QL.Size = new System.Drawing.Size(216, 35);
             this.txtNhap_QL.TabIndex = 24;
             this.txtNhap_QL.Text = "Nhập từ khóa";
             this.txtNhap_QL.Click += new System.EventHandler(this.txtNhap_QL_Click);
@@ -189,9 +195,10 @@ namespace BTL
             "Tên HP",
             "Mã HP",
             "Tên Giảng Viên"});
-            this.comTCHP.Location = new System.Drawing.Point(198, 208);
+            this.comTCHP.Location = new System.Drawing.Point(223, 260);
+            this.comTCHP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comTCHP.Name = "comTCHP";
-            this.comTCHP.Size = new System.Drawing.Size(238, 30);
+            this.comTCHP.Size = new System.Drawing.Size(267, 34);
             this.comTCHP.TabIndex = 23;
             this.comTCHP.SelectedIndexChanged += new System.EventHandler(this.comTCHP_SelectedIndexChanged);
             // 
@@ -200,9 +207,9 @@ namespace BTL
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.label1.Location = new System.Drawing.Point(88, 210);
+            this.label1.Location = new System.Drawing.Point(99, 262);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 24);
+            this.label1.Size = new System.Drawing.Size(118, 26);
             this.label1.TabIndex = 22;
             this.label1.Text = "Tìm theo: ";
             // 
@@ -212,10 +219,11 @@ namespace BTL
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox1.Location = new System.Drawing.Point(0, 143);
+            this.textBox1.Location = new System.Drawing.Point(0, 179);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1201, 42);
+            this.textBox1.Size = new System.Drawing.Size(1351, 52);
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "          Quản lý học phần";
             // 
@@ -235,11 +243,12 @@ namespace BTL
             this.tietHocDataGridViewTextBoxColumn,
             this.sSHienTaiDataGridViewTextBoxColumn});
             this.grdQL.DataSource = this.tblLopHPBindingSource3;
-            this.grdQL.Location = new System.Drawing.Point(71, 270);
+            this.grdQL.Location = new System.Drawing.Point(80, 338);
+            this.grdQL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grdQL.Name = "grdQL";
             this.grdQL.RowHeadersWidth = 51;
             this.grdQL.RowTemplate.Height = 24;
-            this.grdQL.Size = new System.Drawing.Size(1035, 479);
+            this.grdQL.Size = new System.Drawing.Size(1164, 599);
             this.grdQL.TabIndex = 26;
             this.grdQL.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdQL_CellContentDoubleClick);
             // 
@@ -348,19 +357,21 @@ namespace BTL
             this.dKTCDataSet1.DataSetName = "DKTCDataSet1";
             this.dKTCDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button1
+            // btnXuatThongTin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(71, 775);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(215, 50);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Xuất thông tin";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnXuatThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(114)))));
+            this.btnXuatThongTin.FlatAppearance.BorderSize = 0;
+            this.btnXuatThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuatThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatThongTin.ForeColor = System.Drawing.Color.White;
+            this.btnXuatThongTin.Location = new System.Drawing.Point(80, 969);
+            this.btnXuatThongTin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXuatThongTin.Name = "btnXuatThongTin";
+            this.btnXuatThongTin.Size = new System.Drawing.Size(242, 62);
+            this.btnXuatThongTin.TabIndex = 27;
+            this.btnXuatThongTin.Text = "Xuất thông tin";
+            this.btnXuatThongTin.UseVisualStyleBackColor = false;
+            this.btnXuatThongTin.Click += new System.EventHandler(this.btnXuatThongTin_Click);
             // 
             // btnThemmoi
             // 
@@ -369,9 +380,10 @@ namespace BTL
             this.btnThemmoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemmoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemmoi.ForeColor = System.Drawing.Color.White;
-            this.btnThemmoi.Location = new System.Drawing.Point(889, 775);
+            this.btnThemmoi.Location = new System.Drawing.Point(1000, 969);
+            this.btnThemmoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThemmoi.Name = "btnThemmoi";
-            this.btnThemmoi.Size = new System.Drawing.Size(217, 50);
+            this.btnThemmoi.Size = new System.Drawing.Size(244, 62);
             this.btnThemmoi.TabIndex = 27;
             this.btnThemmoi.Text = "Thêm học phần";
             this.btnThemmoi.UseVisualStyleBackColor = false;
@@ -411,9 +423,10 @@ namespace BTL
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(757, 775);
+            this.btnDelete.Location = new System.Drawing.Point(852, 969);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(111, 50);
+            this.btnDelete.Size = new System.Drawing.Size(125, 62);
             this.btnDelete.TabIndex = 27;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -426,9 +439,10 @@ namespace BTL
             this.btnFix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFix.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFix.ForeColor = System.Drawing.Color.White;
-            this.btnFix.Location = new System.Drawing.Point(616, 775);
+            this.btnFix.Location = new System.Drawing.Point(693, 969);
+            this.btnFix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFix.Name = "btnFix";
-            this.btnFix.Size = new System.Drawing.Size(111, 50);
+            this.btnFix.Size = new System.Drawing.Size(125, 62);
             this.btnFix.TabIndex = 27;
             this.btnFix.Text = "Sửa";
             this.btnFix.UseVisualStyleBackColor = false;
@@ -436,23 +450,24 @@ namespace BTL
             // 
             // txtIndex
             // 
-            this.txtIndex.Location = new System.Drawing.Point(1131, 407);
+            this.txtIndex.Location = new System.Drawing.Point(1272, 509);
+            this.txtIndex.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIndex.Name = "txtIndex";
-            this.txtIndex.Size = new System.Drawing.Size(29, 22);
+            this.txtIndex.Size = new System.Drawing.Size(32, 26);
             this.txtIndex.TabIndex = 28;
             this.txtIndex.Visible = false;
             // 
             // frmQL
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(218)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(1201, 853);
+            this.ClientSize = new System.Drawing.Size(1351, 1050);
             this.Controls.Add(this.txtIndex);
             this.Controls.Add(this.btnFix);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnThemmoi);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnXuatThongTin);
             this.Controls.Add(this.grdQL);
             this.Controls.Add(this.btnTk);
             this.Controls.Add(this.txtNhap_QL);
@@ -460,6 +475,7 @@ namespace BTL
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmQL";
             this.Text = "frmQL";
             this.Load += new System.EventHandler(this.frmQL_Load);
@@ -492,7 +508,7 @@ namespace BTL
         private System.Windows.Forms.ComboBox comTCHP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnXuatThongTin;
         private System.Windows.Forms.Button btnThemmoi;
         private DKTCDataSet1 dKTCDataSet1;
         private System.Windows.Forms.BindingSource tblLopHPBindingSource;

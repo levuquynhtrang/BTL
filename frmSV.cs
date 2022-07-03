@@ -25,6 +25,7 @@ namespace BTL
         DataTable dt3 = new DataTable();
         DataTable dt4 = new DataTable();
         DataTable dt5 = new DataTable();
+        DataTable dtBC = new DataTable();
 
         string sql, constr, s;
         int i;
@@ -234,6 +235,20 @@ namespace BTL
 
         }
 
+        private void btnXuatPhieuDK_Click(object sender, EventArgs e)
+        {
+            sql = "select MaLopHP, TenMon, SoTC, TietHoc, PhongHoc, GiangVien from tblKQDangKi";
+            da = new SqlDataAdapter(sql, conn);
+            dtBC.Clear();
+            da.Fill(dtBC);
+            rptKQDK bc = new rptKQDK();
+            bc.SetDataSource(dtBC);
+            bc.DataDefinition.FormulaFields["MaSV"].Text = "'"+ txtInfor.Text+"'";
+            bc.DataDefinition.FormulaFields["TenSV"].Text = "'" + txtHoTen.Text + "'";
+            frmRptKQDk f = new frmRptKQDk(bc);
+            f.Show();
+        }
+
         private void btnHDDK_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://drive.google.com/file/d/12JMQuaUM5f-qtzbkeuIcPQQ4qk41XCnY/view");
@@ -259,7 +274,7 @@ namespace BTL
 
         private void frmSV_Load(object sender, EventArgs e)
         {
-            constr = "Data Source=LVQT\\MSSQLSEVER01;Initial Catalog=DKTC;Integrated Security=True";
+            constr = "Data Source=LAPTOP-JUURU7V4\\SQLEXPRESS;Initial Catalog=DKTC;Integrated Security=True";
             conn.ConnectionString = constr;
             conn.Open();
             dt.Clear();

@@ -18,6 +18,7 @@ namespace BTL
         SqlCommand cmd = new SqlCommand();
         DataTable dt = new DataTable();
         DataTable dt1 = new DataTable();
+        DataTable dtBC = new DataTable();
         string sql, constr;
         frmAdd ADD;
         frmThongTinLopHoc TTLH;
@@ -114,7 +115,7 @@ namespace BTL
             //this.tblLopHPTableAdapter1.Fill(this.dKTCDataSet5.tblLopHP);
             // TODO: This line of code loads data into the 'dKTCDataSet1.tblLopHP' table. You can move, or remove it, as needed.
             //this.tblLopHPTableAdapter.Fill(this.dKTCDataSet1.tblLopHP);
-            constr = "Data Source=LVQT\\MSSQLSEVER01;Initial Catalog=DKTC;Integrated Security=True";
+            constr = "Data Source=LAPTOP-JUURU7V4\\SQLEXPRESS;Initial Catalog=DKTC;Integrated Security=True";
             conn.ConnectionString = constr;
             sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc,SSHienTai from tblLopHP";
             da = new SqlDataAdapter(sql, conn);
@@ -187,6 +188,18 @@ namespace BTL
         private void btnThemmoi_Click_1(object sender, EventArgs e)
         {
             frmAdd f = new frmAdd(this);
+            f.Show();
+        }
+
+        private void btnXuatThongTin_Click(object sender, EventArgs e)
+        {
+            sql = "select MaLopHP, TenLopHP, SiSo, GiangVien, PhongHoc, TietHoc, SSHienTai from tblLopHP";
+            da = new SqlDataAdapter(sql, conn);
+            dtBC.Clear();
+            da.Fill(dtBC);
+            rptQL bc = new rptQL();
+            bc.SetDataSource(dtBC);
+            frmRptQL f = new frmRptQL(bc);
             f.Show();
         }
 

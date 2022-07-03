@@ -110,7 +110,7 @@ namespace BTL
             }
             else if (comTCHP.Text == "Mã môn")
             {
-                sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc.SSHienTai from tblLopHP Where GiangVien= N'" + txtNhap.Text + "'";
+                sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc.SSHienTai from tblLopHP Where MaMon= '" + txtNhap.Text + "'";
             }
 
             da = new SqlDataAdapter(sql, conn);
@@ -123,7 +123,7 @@ namespace BTL
         {
             // TODO: This line of code loads data into the 'dKTCDataSet5.tblLopHP' table. You can move, or remove it, as needed.
             // this.tblLopHPTableAdapter.Fill(this.dKTCDataSet5.tblLopHP);
-            constr = "Data Source=LVQT\\MSSQLSEVER01;Initial Catalog=DKTC;Integrated Security=True";
+            constr = "Data Source=LAPTOP-JUURU7V4\\SQLEXPRESS;Initial Catalog=DKTC;Integrated Security=True";
             conn.ConnectionString = constr;
             sql = "Select MaLopHP,MaMon,TenLopHP,Siso,GiangVien,PhongHoc,TietHoc,SSHienTai from tblLopHP";
             da = new SqlDataAdapter(sql, conn);
