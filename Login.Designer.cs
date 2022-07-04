@@ -201,6 +201,7 @@ namespace BTL
             this.txtMK.TabIndex = 0;
             this.txtMK.Text = "Mật khẩu";
             this.txtMK.Click += new System.EventHandler(this.txtMK_Click);
+            this.txtMK.TextChanged += new System.EventHandler(this.txtMK_TextChanged);
             this.txtMK.Enter += new System.EventHandler(this.txtMK_Enter);
             this.txtMK.Leave += new System.EventHandler(this.txtMK_Leave);
             // 

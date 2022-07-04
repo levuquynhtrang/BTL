@@ -27,9 +27,9 @@ namespace BTL
 
         private void btnTrangChuTCHP_Click(object sender, EventArgs e)
         {
-            frmSV f = new frmSV();
-            f.Show();
-            this.Close();
+            //frmSV f = new frmSV();
+           // f.Show();
+            //this.Close();
         }
 
         private void btnLogoutTCHP_Click(object sender, EventArgs e)
